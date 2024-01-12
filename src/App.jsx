@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import shopLogo from './assets/shoplogo.svg'
 import './App.css'
 
 function App() {
@@ -9,24 +8,26 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        {/* <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Oldshop logo" />
+        </a> */}
+        
+        <a href="http://www.w3.org/2000/svg" target="_blank">
+          <img src={shopLogo} className="logo shop" alt="Oldshop logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Old Shop</h1>
+      <h3>Your shop for old stuff.</h3>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </button> 
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          {/* Edit <code>src/App.jsx</code> and save to test HMR */}
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Project under construction. Stay tuned!
       </p>
     </>
   )
