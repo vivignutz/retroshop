@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
+import ProductList from './components/ProductList';
 import shopLogo from './assets/shoplogo.svg'
 import './App.css'
 
