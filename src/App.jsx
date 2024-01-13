@@ -12,16 +12,18 @@ function App() {
           <img src={viteLogo} className="logo" alt="Oldshop logo" />
         </a> */}
         
-        <a href="http://www.w3.org/2000/svg" target="_blank">
+        <a href="http://www.w3.org/2000/svg" target="_blank" onClick={(e) => e.preventDefault()}>
           <img src={shopLogo} className="logo shop" alt="Oldshop logo" />
         </a>
       </div>
       <h1>Old Shop</h1>
       <h3>Your shop for old stuff.</h3>
       <div className="card">
+        {/* 
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button> 
+        */}
         <p>
           {/* Edit <code>src/App.jsx</code> and save to test HMR */}
         </p>
