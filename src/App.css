@@ -30,8 +30,12 @@
   }
 }
 
+#products {
+  padding: 1em;
+}
+
 .card {
-  padding: 2em;
+  /*padding: 2em;*/
 }
 
 .read-the-docs {

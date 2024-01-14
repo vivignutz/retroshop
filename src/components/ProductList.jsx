@@ -4,13 +4,15 @@ import axios from 'axios';
 
 function ProductList() {
   const [products, setProducts] = useState([]);
-  const [newProduct, setNewProduct] = useState({ name: "", price: 0 });
+  const [newProduct, setNewProduct] = useState({ name: "", price: 0, description: "" });
+  const [editingProduct, setEditingProduct] = useState(null); 
+  const [editFields, setEditFields] = useState({ name: "", price: 0, description: "" });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         console.log('Sending GET request');
-        const response = await axios.get ('/api/products'); // GET
+        const response = await axios.get('/api/products', { headers: { 'Cache-Control': 'no-cache' } }); // GET
         console.log('GET response:', response.data);
         setProducts(response.data);
       } catch (error) {
@@ -30,14 +32,14 @@ function ProductList() {
 
     try {
       console.log('Sending POST request');
-      const response = await axios.post('/api/products', newProduct); // POST
+      const response = await axios.post('/api/products', newProduct);
       console.log('POST response:', response.data);
 
       // Adding product
       setProducts([...products, response.data]);
 
       // Cleaning form fields
-      setNewProduct({ name: "", price: 0 });
+      setNewProduct({ name: "", price: 0, description: "" });
     } catch (error) {
       console.error('Error fetching products:', error);
     }
@@ -45,32 +47,35 @@ function ProductList() {
 
   // Deleting product of the list
   const deleteProduct = async (productId) => {
-    try { 
-      console.log('Sending DELETE request', productId);  
-      const response = await axios.delete(`/api/products/${productId}`); //DELETE
+    try {
+      console.log('Sending DELETE request', productId);
+  
+      const response = await axios.delete(`/api/products/${productId}`);
       console.log('DELETE response:', response);
-        
+  
       if (response.status === 204) {
-        // Delete product
-        setProducts(products.filter(product => product.id !== productId));
+        console.log('Product deleted successfully');
+
+        setProducts((prevProducts) => prevProducts.filter((product) => product.id !== productId));
+        console.log('After updating state');
+        console.log('Updated products:', products);
       } else {
         console.error('Error deleting product:', response.statusText);
       }
     } catch (error) {
       console.error('Error deleting product:', error);
     }
-  };
+  };  
 
   // Editing product of the list
   const editProduct = async (productId, updatedProduct) => {
     try {
-      console.log('Sending PUT request', productId);
-      const response = await axios.put(`/api/products/${productId}`, updatedProduct); // PUT
-      console.log('PUT response:', response);
-        
+      const response = await axios.put(`/api/products/${productId}`, updatedProduct);
+  
       if (response.status === 200) {
-        // List upload
-        setProducts(products.map(product => (product.id === productId ? response.data : product)));
+        // Product upload
+        setProducts(products.map(product => (product.id === productId ? { ...product, ...updatedProduct } : product)));
+        setEditingProduct(null);
       } else {
         console.error('Error editing product:', response.statusText);
       }
@@ -79,24 +84,72 @@ function ProductList() {
     }
   };
 
-        // "Edit" button to products
+  const handleEditFieldsChange = (e) => {
+    setEditFields({ ...editFields, [e.target.name]: e.target.value });
+  };
+
+  const openEditForm = (product) => {
+    setEditingProduct(product.id);
+    setEditFields({
+      name: product.name,
+      price: product.price,
+      description: product.description || "",
+    });
+  };
+
+  const closeEditForm = () => {
+    setEditingProduct(null);
+  };
+
+        // "Edit" and "Delete" button
         {products.map(product => (
           <li key={product.id}>
-            {product.name} - €{product.price}
-            <button onClick={() => deleteProduct(product.id)}>Delete</button>
-            <button onClick={() => editProduct(product.id, { name: "New product", price: 99.99 })}>Edit</button>
-
-          </li>
+          {product.name} - € {product.price}
+          <button className="editButton" onClick={() => editProduct(product.id, { name: "New Product", price: 99.99 })}>Edit</button>
+          <button className="deleteButton" onClick={() => deleteProduct(product.id)}>Delete</button>
+        </li>
         ))}
 
         return (
           <div>
             <h2>Products</h2>
             <ul>
-              {products.map(product => (
+              {products.map((product) => (
                 <li key={product.id}>
-                  {product.name} - €{product.price}
-                  <button onClick={() => deleteProduct(product.id)}>Delete</button>
+                  {editingProduct === product.id ? (
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Product Name"
+                        value={editFields.name}
+                        onChange={handleEditFieldsChange}
+                      />
+                      <input
+                        type="number"
+                        name="price"
+                        placeholder="Product Price"
+                        value={editFields.price}
+                        onChange={handleEditFieldsChange}
+                      />
+                      <input
+                        type="text"
+                        name="description"
+                        placeholder="Product Description"
+                        value={editFields.description}
+                        onChange={handleEditFieldsChange}
+                      />
+                      <button className='saveButton' onClick={() => editProduct(product.id, editFields)}>Save</button>
+                      <button className='cancelButton' onClick={closeEditForm}>Cancel</button>
+                    </div>
+                  ) : (
+                    <div id='products'>
+                      <strong>{product.name}</strong> - € {product.price}
+                      <p>{product.description}</p>
+                      <button className='editButton' onClick={() => openEditForm(product)}>Edit</button>
+                      <button className='deleteButton' onClick={() => deleteProduct(product.id)}>Delete</button>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
@@ -115,7 +168,13 @@ function ProductList() {
                 value={newProduct.price}
                 onChange={(e) => setNewProduct({ ...newProduct, price: Number(e.target.value) })}
               />
-              <button onClick={addProduct}>Add product</button>
+              <input
+                type="text"
+    placeholder="Product description"
+    value={newProduct.description}
+                onChange={(e) => setNewProduct({ ...newProduct, description: e.target.value })}
+              />
+              <button className='addButton' onClick={addProduct}>Add product</button>
             </div>
           </div>
         );
