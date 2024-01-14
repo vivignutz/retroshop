@@ -1,39 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductList from './components/ProductList';
-import shopLogo from './assets/shoplogo.svg'
-import './App.css'
+import shopLogo from './assets/shoplogo.svg';
+import './App.css';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <Router>
+      <>
       <div>
-        {/* <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Oldshop logo" />
-        </a> */}
-        
-        <a href="http://www.w3.org/2000/svg" target="_blank" onClick={(e) => e.preventDefault()}>
-          <img src={shopLogo} className="logo shop" alt="Oldshop logo" />
-        </a>
-      </div>
-      <h1>Old Shop</h1>
-      <h3>Your shop for old stuff.</h3>
-      <div className="card">
-        {/* 
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button> 
-        */}
-        <p>
-          {/* Edit <code>src/App.jsx</code> and save to test HMR */}
+          <Link to="/">
+            <img src={shopLogo} className="logo shop" alt="Oldshop logo" />
+          </Link>
+        </div>
+
+        <h1>Old Shop</h1>
+        <h3>Your shop for old stuff.</h3>
+
+        <p className="read-the-docs">
+          Project under construction. Stay tuned! ;-)
         </p>
-      </div>
-      <p className="read-the-docs">
-        Project under construction. Stay tuned!
-      </p>
-    </>
-  )
+
+        {/*  */}
+        <div className="card">
+          <Routes>
+            <Route path="/products" element={<ProductList />} />
+          </Routes>
+
+          <Link to="/products">
+            <button className="button-link">
+              Go to products
+            </button>
+          </Link>
+        </div>
+      </>
+    </Router>
+  );
 }
 
-export default App
+export default App;

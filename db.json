@@ -1,24 +1,104 @@
 {
-    "products": [
-        { "id": 1, "name": "Record Player", "description": "Vintage vinyl record player with built-in speakers" },
-        { "id": 2, "name": "Polaroid Camera", "description": "Classic instant camera for capturing memories on the spot" },
-        { "id": 3, "name": "Retro Television", "description": "Old-school CRT television with a charming design" },
-        { "id": 4, "name": "Rotary Phone", "description": "Dial-up telephone with a rotary dial for a nostalgic feel" },
-        { "id": 5, "name": "Typewriter", "description": "Vintage manual typewriter for a touch of literary nostalgia" },
-        { "id": 6, "name": "Tube Radio", "description": "Classic tube radio with warm analog sound" },
-        { "id": 7, "name": "Cassette Player", "description": "Portable cassette player for playing mixtapes from the past" },
-        { "id": 8, "name": "Boombox", "description": "Iconic '80s boombox with dual cassette decks and radio tuner" },
-        { "id": 9, "name": "Game Boy", "description": "Original handheld gaming console with monochrome screen" },
-        { "id": 10, "name": "Film Projector", "description": "Antique film projector for a cinematic experience at home" },
-        { "id": 11, "name": "Vintage Alarm Clock", "description": "Mechanical alarm clock with a retro design" },
-        { "id": 12, "name": "Tube Television", "description": "Television set featuring cathode ray tube technology" },
-        { "id": 13, "name": "VHS Player", "description": "VCR for playing classic movies on VHS tapes" },
-        { "id": 14, "name": "Floppy Disk Drive", "description": "Old-school disk drive for reading floppy disks" },
-        { "id": 15, "name": "Old-Fashioned Fan", "description": "Vintage electric fan with metal blades" },
-        { "id": 16, "name": "Retro Microphone", "description": "Classic microphone with a timeless aesthetic" },
-        { "id": 17, "name": "Tube Amplifier", "description": "Amplifier with vacuum tubes for a warm audio tone" },
-        { "id": 18, "name": "Slide Projector", "description": "Projector for showcasing photographic slides" },
-        { "id": 19, "name": "Film Camera", "description": "Analog film camera for capturing moments on film" },
-        { "id": 20, "name": "Vintage Fan Heater", "description": "Electric fan heater with a retro look and feel" }
-    ]
+  "products": [
+    {
+      "id": "2",
+      "name": "Polaroid Camera",
+      "description": "Classic instant camera for capturing memories on the spot"
+    },
+    {
+      "id": "3",
+      "name": "Retro Television",
+      "description": "Old-school CRT television with a charming design"
+    },
+    {
+      "id": "4",
+      "name": "Rotary Phone",
+      "description": "Dial-up telephone with a rotary dial for a nostalgic feel"
+    },
+    {
+      "id": "5",
+      "name": "Typewriter",
+      "description": "Vintage manual typewriter for a touch of literary nostalgia"
+    },
+    {
+      "id": "6",
+      "name": "Tube Radio",
+      "description": "Classic tube radio with warm analog sound"
+    },
+    {
+      "id": "7",
+      "name": "Cassette Player",
+      "description": "Portable cassette player for playing mixtapes from the past"
+    },
+    {
+      "id": "8",
+      "name": "Boombox",
+      "description": "Iconic '80s boombox with dual cassette decks and radio tuner"
+    },
+    {
+      "id": "9",
+      "name": "Game Boy",
+      "description": "Original handheld gaming console with monochrome screen"
+    },
+    {
+      "id": "10",
+      "name": "Film Projector",
+      "description": "Antique film projector for a cinematic experience at home"
+    },
+    {
+      "id": "11",
+      "name": "Vintage Alarm Clock",
+      "description": "Mechanical alarm clock with a retro design"
+    },
+    {
+      "id": "12",
+      "name": "Tube Television",
+      "description": "Television set featuring cathode ray tube technology"
+    },
+    {
+      "id": "13",
+      "name": "VHS Player",
+      "description": "VCR for playing classic movies on VHS tapes"
+    },
+    {
+      "id": "14",
+      "name": "Floppy Disk Drive",
+      "description": "Old-school disk drive for reading floppy disks"
+    },
+    {
+      "id": "15",
+      "name": "Old-Fashioned Fan",
+      "description": "Vintage electric fan with metal blades"
+    },
+    {
+      "id": "16",
+      "name": "Retro Microphone",
+      "description": "Classic microphone with a timeless aesthetic"
+    },
+    {
+      "id": "18",
+      "name": "Slide Projector",
+      "description": "Projector for showcasing photographic slides"
+    },
+    {
+      "id": "19",
+      "name": "Film Camera",
+      "description": "Analog film camera for capturing moments on film"
+    },
+    {
+      "id": "20",
+      "name": "Vintage Fan Heater",
+      "description": "Electric fan heater with a retro look and feel"
+    },
+    {
+      "id": "c8c7",
+      "name": "New Product",
+      "price": 50
+    },
+    {
+      "id": "e429",
+      "name": "New Product 2",
+      "price": 45
+    }
+  ]
 }
