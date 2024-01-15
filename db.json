@@ -1,39 +1,52 @@
 {
   "products": [
     {
-      "id": "4",
-      "name": "Rotary Phone",
-      "description": "Dial-up telephone with a rotary dial for a nostalgic feel"
+      "name": "Rotary Phone 2nd generation",
+      "price": "46",
+      "description": "Dial-up telephone with a rotary dial for a nostalgic feel",
+      "id": "4"
     },
     {
-      "id": "5",
       "name": "Typewriter",
-      "description": "Vintage manual typewriter for a touch of literary nostalgia"
+      "price": "59",
+      "description": "Vintage manual typewriter for a touch of literary nostalgia",
+      "id": "5"
     },
     {
-      "id": "6",
       "name": "Tube Radio",
-      "description": "Classic tube radio with warm analog sound"
+      "price": "35",
+      "description": "Classic tube radio with warm analog sound",
+      "id": "6"
     },
     {
-      "id": "8",
       "name": "Boombox",
-      "description": "Iconic '80s boombox with dual cassette decks and radio tuner"
+      "price": "49",
+      "description": "Iconic '80s boombox with dual cassette decks and radio tuner",
+      "id": "8"
     },
     {
-      "id": "9",
       "name": "Game Boy",
-      "description": "Original handheld gaming console with monochrome screen"
+      "price": "28",
+      "description": "Original handheld gaming console with monochrome screen",
+      "id": "9"
     },
     {
-      "id": "11",
       "name": "Vintage Alarm Clock",
-      "description": "Mechanical alarm clock with a retro design"
+      "price": "27",
+      "description": "Mechanical alarm clock with a retro design",
+      "id": "11"
     },
     {
-      "id": "12",
-      "name": "Tube Television",
-      "description": "Television set featuring cathode ray tube technology"
+      "name": "Tube Television 27\"",
+      "price": "56",
+      "description": "Television set featuring cathode ray tube technology",
+      "id": "12"
+    },
+    {
+      "id": "613983",
+      "name": "Test Product",
+      "price": 44,
+      "description": "Only for tests purpose"
     }
   ]
 }

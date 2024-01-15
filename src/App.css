@@ -32,10 +32,8 @@
 
 #products {
   padding: 1em;
-}
-
-.card {
-  /*padding: 2em;*/
+  background-color: #b6b4b48c;
+  border: #1e1d1d;
 }
 
 .read-the-docs {

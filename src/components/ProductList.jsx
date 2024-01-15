@@ -1,6 +1,12 @@
 // src/components/ProductList.jsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+
+// To generate only numeric ID's
+const generateNumericId = () => {
+  const randomId = Math.floor(Math.random() * 1000000).toString();
+  return randomId;
+};
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -32,7 +38,9 @@ function ProductList() {
 
     try {
       console.log('Sending POST request');
-      const response = await axios.post('/api/products', newProduct);
+      const newProductId = generateNumericId();
+      const response = await axios.post('/api/products', 
+      { ...newProduct, id: newProductId });
       console.log('POST response:', response.data);
 
       // Adding product
@@ -109,6 +117,8 @@ function ProductList() {
           <button className="deleteButton" onClick={() => deleteProduct(product.id)}>Delete</button>
         </li>
         ))}
+
+        console.log('Rendering with updated status:', products);
 
         return (
           <div>
