@@ -47,6 +47,12 @@
       "name": "Test Product",
       "price": 44,
       "description": "Only for tests purpose"
+    },
+    {
+      "id": "907129",
+      "name": "Test product 2",
+      "price": 665,
+      "description": "another test product"
     }
   ]
 }

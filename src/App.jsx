@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductList from './components/ProductList';
-import shopLogo from './assets/shoplogo.svg';
+//import shopLogo from './assets/shoplogo.svg';
 import './App.css';
 
 
@@ -10,12 +10,12 @@ function App() {
       <>
       <div>
           <Link to="/">
-            <img src={shopLogo} className="logo shop" alt="Oldshop logo" />
+            <img src="/logo.gif" className="logo shop" alt="Oldshop logo" />
           </Link>
         </div>
 
         <h1>Old Shop</h1>
-        <h3>Your shop for old stuff.</h3>
+        <h3>Your shop for old stuffs.</h3>
 
         <p className="read-the-docs">
           Project under construction. Stay tuned! ;-)
