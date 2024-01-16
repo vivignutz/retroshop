@@ -1,17 +1,13 @@
 // Header.jsx
 import React from "react";
-import NavbarComponent from "./components/Navbar";
+import Navbar from "./Navbar";
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   return (
     <header>
-      <img src="/logo.gif" alt="Animated Logo" />
-      <div className="top-section">
-        <h1>Old Shop</h1>
-      </div>
-
-
-      <NavbarComponent />
+      <Navbar />
     </header>
   );
 };

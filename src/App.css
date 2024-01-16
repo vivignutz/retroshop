@@ -5,13 +5,13 @@
   text-align: center;
 }
 
-.logo {
-  height: 10em;
-  padding: 1.5em;
+.logo-shop {
+  height: 4em;
+  padding: 0.4em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+.logo-shop:hover {
   filter: drop-shadow(0 0 2em #d33535aa);
 }
 
@@ -25,8 +25,8 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a .logo {
-    animation: logo-spin infinite 10s linear;
+  a .logo-shop {
+    animation: logo-spin infinite 30s linear;
   }
 }
 

@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NavbarComponent from "./components/Navbar";
 import Header from "./components/Header";
-import HeroImage from "./components/HeroImage";
+import HeroSection from "./components/HeroSection";
 import Categories from "./components/Categories";
-import ProductList from './components/ProductList';
-import Footer from "./Footer";
+import ProductList from "./components/ProductList";
+import Footer from "./components/Footer";
 import './App.css';
 
 
@@ -13,40 +13,25 @@ function App() {
   return (
     <Router>
       <div>
-        <Link to="/">
-            <img src="/logo.gif" className="logo shop" alt="Oldshop logo" />
-        </Link>
-        <NavbarComponent />
         <Header />
 
+        <NavbarComponent />
+
+        <h1>Old Shop</h1> 
         <HeroSection />
 
-        <div>
-          {/* render the categories */}
-          {[1, 2, 3, 4, 5, 6].map((categoryId) => (
-            <Category key={categoryId} name={`Category ${categoryId}`} />
-          ))}
-        </div>
+        <Categories />
 
-        <Footer />
-      </div>
-
-{/* another routes (if needed)
         <Routes>
           <Route path="/products" element={<ProductList />} />
-        </Routes>
+        </Routes>   
 
-        <h1>Old Shop</h1>
-        <h3>Your shop for old stuffs.</h3>
+        <Footer />
 
-        <p className="read-the-docs">
-          Project under construction. Stay tuned! ;-)
-        </p>
-      </>
-    */}
+      </div>
+
     </Router>
   );
 }
-
 
 export default App;
