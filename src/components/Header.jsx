@@ -1,14 +1,19 @@
 // Header.jsx
-import React from 'react'
+import React from "react";
+import NavbarComponent from "./Navbar";
 
 const Header = () => {
   return (
     <header>
-      <h1>Old Shop</h1>
       <img src="/logo.gif" alt="Animated Logo" />
-      {/* other elements coming soon */}
-    </header>
-  )
-}
+      <div className="top-section">
+        <h1>Old Shop</h1>
+      </div>
 
-export default Header
+
+      <NavbarComponent />
+    </header>
+  );
+};
+
+export default Header;
