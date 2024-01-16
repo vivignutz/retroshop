@@ -1,6 +1,6 @@
 // Header.jsx
 import React from "react";
-import NavbarComponent from "./Navbar";
+import NavbarComponent from "./components/Navbar";
 
 const Header = () => {
   return (
