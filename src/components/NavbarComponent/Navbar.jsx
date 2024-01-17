@@ -12,7 +12,7 @@ const NavbarComponent = () => {
       fixed="top"
       style={{ zIndex: 9000 }}
     >
-      <Container>
+      <Container className={styles.navContainer}>
         <Navbar.Brand as="div" className="d-flex align-items-center">
           <div className="logo-section">
             <Link to="/">

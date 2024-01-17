@@ -12,18 +12,15 @@ function App() {
   return (
     <Router>
       <div>
-
         <NavbarComponent />
 {/*     <HeroSection />
         <Categories />
         <Routes>
           <Route path="/products" element={<ProductList />} />
         </Routes>   
-  */}
+*/}
         <Footer />
-
       </div>
-
     </Router>
   );
 }
