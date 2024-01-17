@@ -1,7 +1,7 @@
 // Navbar.jsx
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import styles from './Navbar.module.css';
+import styles from './components/Navbar.module.css';
 //import axios from "axios";
 
 const NavbarComponent = () => {
