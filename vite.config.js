@@ -7,13 +7,22 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001', // accessing backend
+        target: 'http://localhost:3001', // access to server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
     hmr: {
       overlay: false,
+    },
+  },
+  resolve: {
+    alias: {
+      '@': '/src',  // Alias para o diretório src
+      '@components': '/src/components',
+      '@navbar': '/src/components/NavbarComponent/Navbar.jsx',
+      '@footer': '/src/components/Footer/Footer.jsx',
+      // other components here
     },
   },
 });

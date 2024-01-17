@@ -1,5 +1,5 @@
-/* Navbar.css */
-.navbar-root {
+/* Navbar.module.css */
+.NavBar {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
@@ -40,4 +40,11 @@
 
 .read-the-docs {
     color: #888;
+}
+
+.Header {
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    color: #fff;
 }
