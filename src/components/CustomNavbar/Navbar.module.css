@@ -1,0 +1,43 @@
+/* Navbar.css */
+.navbar-root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo-shop {
+    height: 4em;
+    padding: 0.4em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo-shop:hover {
+    filter: drop-shadow(0 0 2em #d33535aa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .logo-shop {
+        animation: logo-spin infinite 30s linear;
+    }
+}
+
+#products {
+    padding: 1em;
+    background-color: #b6b4b48c;
+    border: #1e1d1d;
+}
+
+.read-the-docs {
+    color: #888;
+}

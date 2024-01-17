@@ -1,11 +1,11 @@
-import React from "react";
+// App.jsx
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import NavbarComponent from "./components/Navbar";
-import Header from "./components/Header";
+import CustomNavbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
 import HeroSection from "./components/HeroSection";
 import Categories from "./components/Categories";
 import ProductList from "./components/ProductList";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import './App.css';
 
 
@@ -15,7 +15,7 @@ function App() {
       <div>
         <Header />
 
-        <NavbarComponent />
+        <CustomNavbar />
 
         <h1>Old Shop</h1> 
         <HeroSection />

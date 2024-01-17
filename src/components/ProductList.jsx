@@ -18,7 +18,7 @@ function ProductList() {
     const fetchData = async () => {
       try {
         console.log('Sending GET request');
-        const response = await axios.get('/api/products', { headers: { 'Cache-Control': 'no-cache' } }); // GET
+        const response = await axios.get('/api/products', { header: { 'Cache-Control': 'no-cache' } }); // GET
         console.log('GET response:', response.data);
         setProducts(response.data);
       } catch (error) {
