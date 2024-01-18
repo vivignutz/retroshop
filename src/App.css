@@ -12,6 +12,14 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
+.logo {
+    max-height: 100%;
+    width: auto;
+    padding: 0, 0.4em, 0 0.4em;
+    will-change: filter;
+    transition: filter 300ms;
+}
 .logo-shop:hover {
   filter: drop-shadow(0 0 2em #d33535aa);
 }

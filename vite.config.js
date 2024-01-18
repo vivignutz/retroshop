@@ -25,4 +25,8 @@ export default defineConfig({
       // other components here
     },
   },
+
+  hmr: {
+    overlay: false,
+  },
 });

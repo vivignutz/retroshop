@@ -14,11 +14,9 @@ const NavbarComponent = () => {
     >
       <Container className={styles.navContainer}>
         <Navbar.Brand as="div" className="d-flex align-items-center">
-          <div className="logo-section">
-            <Link to="/">
-              <img src="/logo.gif" className="logo-shop" alt="Animated Logo" />
-            </Link>
-          </div>
+          <Link to="/">
+            <img src="/logo.gif" className="logo-shop" alt="Animated Logo" />
+          </Link>
 
           <div className="brand-text ml-2">
             <span>Old Shop</span>

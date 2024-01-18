@@ -1,15 +1,15 @@
 // Footer.jsx
 import React from "react";
-//import styles from './components/Footer.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
+import styles from './Footer.module.css'; 
 
 const Footer = () => {
   const githubUrl = 'https://github.com/vivignutz/';
 
   return (
-    <footer className="footer mt-auto py-3 dark-bg">
+    <footer className={`${styles.footer} mt-auto py-3 ${styles.darkBg}`}>
       <div className="container">
         <div className="row">
           <div className="col">
@@ -17,7 +17,7 @@ const Footer = () => {
             <hr />
 
             <p className="text-white">Made by Viviane Gnutzmann with LOVE</p>
-            <p className="text-white">This website was made for educational purposes only!</p>
+            <p className="text-white">This website was made for educational purposes only.</p>
               <a href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
