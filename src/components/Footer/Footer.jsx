@@ -1,6 +1,6 @@
 // Footer.jsx
 import React from "react";
-import styles from './components/Footer.module.css'
+//import styles from './components/Footer.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -13,7 +13,7 @@ const ContactForm = () => {
       <ContactForm />
     </div>
   );
-};
+};  
 
 const Footer = () => {
   const githubUrl = 'https://github.com/vivignutz/';

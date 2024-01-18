@@ -18,7 +18,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': '/src',  // Alias para o diretório src
+      '@': '/src',
       '@components': '/src/components',
       '@navbar': '/src/components/NavbarComponent/Navbar.jsx',
       '@footer': '/src/components/Footer/Footer.jsx',
