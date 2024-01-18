@@ -32,9 +32,9 @@
     filter: drop-shadow(0 0 2em #d33535aa);
 }
 
-.logo-shop {
-    max-height: 100%;
-    width: auto;
+
+.logoShop {
+    width: 50px;
     height: 4em;
     padding: 0, 0.4em, 0 0.4em;
     will-change: filter;

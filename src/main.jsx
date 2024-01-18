@@ -6,10 +6,17 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+
+
 const rootElement = document.getElementById('root');
 
 createRoot(rootElement).render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+      </Routes> 
+    </Router>
   </React.StrictMode>
 );
