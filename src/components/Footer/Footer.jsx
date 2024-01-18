@@ -3,17 +3,7 @@ import React from "react";
 //import styles from './components/Footer.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
-
-const ContactForm = () => {
-  
-  return (
-    <div>
-      <ContactForm />
-    </div>
-  );
-};  
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
 
 const Footer = () => {
   const githubUrl = 'https://github.com/vivignutz/';
@@ -59,7 +49,7 @@ const Footer = () => {
             <h3 className="text-white">Old Shop</h3>
             <hr />
 
-            <ContactForm />
+            {/*<ContactForm />*/}
           </div>
         </div>
       </div>

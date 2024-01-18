@@ -7,21 +7,21 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001', // access to server
+        target: 'http://localhost:5001', // access to server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
-    hmr: {
-      overlay: false,
-    },
+
   },
   resolve: {
     alias: {
-      '@': '/src',
-      '@components': '/src/components',
-      '@navbar': '/src/components/NavbarComponent/Navbar.jsx',
-      '@footer': '/src/components/Footer/Footer.jsx',
+      '@': './src',
+      '@components': './src/components',
+      '@navbar': './src/components/NavbarComponent/Navbar.jsx',
+      '@footer': './src/components/Footer/Footer.jsx',
+      '@products': './components/ProductList/ProductList.jsx',
+      '@categories': './components/Categories/Categories.jsx',      
       // other components here
     },
   },
