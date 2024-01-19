@@ -1,10 +1,52 @@
-/* Footer.css */
+/* Footer.module.css */
+
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #333;
+    color: #fff;
 }
 
-.dark-bg {
-    background-color: #343a40;
+.darkBg {
+    background-color: #222;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.textWhite {
+    color: #fff;
+}
+
+.btnSignup {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.textLinks {
+    display: flex;
+    align-items: center;
+}
+
+.ms3 {
+    margin-left: 3px;
+}
+
+.footerCopyright {
+    font-size: 12px;
 }

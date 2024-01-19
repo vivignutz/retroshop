@@ -9,7 +9,6 @@ const NavbarComponent = () => {
     <Navbar
       className={styles.NavBar}
       expand="md"
-      fixed="top"
       style={{ zIndex: 9000 }}
     >
       <Container className={styles.navContainer}>
