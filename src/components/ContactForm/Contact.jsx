@@ -8,17 +8,17 @@ const ContactForm = () => {
       <form>
         <div className={styles.formGroup}>
           <label className={styles.formLabel} htmlFor="name">Name:</label>
-          <input className={styles.formControl} type="text" id="name" name="name" />
+          <input className={styles.formControl} type="text" id="name" name="name" placeholder="Your name" />
         </div>
 
         <div className={styles.formGroup}>
           <label className={styles.formLabel} htmlFor="email">Email:</label>
-          <input className={styles.formControl} type="email" id="email" name="email" />
+          <input className={styles.formControl} type="email" id="email" name="email" placeholder="Your email" />
         </div>
 
         <div className={styles.formGroup}>
           <label className={styles.formLabel} htmlFor="message">Message:</label>
-          <textarea className={styles.formControl} id="message" name="message" rows="4"></textarea>
+          <textarea className={styles.formControl} id="message" name="message" rows="4" placeholder="Your message"></textarea>
         </div>
 
         <button className={styles.submitButton} type="submit">Submit</button>

@@ -1,17 +1,17 @@
 /* Footer.module.css */
 
 .footer {
-    background-color: #333;
-    color: #fff;
+    color: #2E2D29;
 }
 
 .darkBg {
-    background-color: #222;
+    background-color: #d8d5d57f;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0px 30px;
 }
 
 .row {
@@ -25,10 +25,6 @@
     margin: 0 15px;
 }
 
-.textWhite {
-    color: #fff;
-}
-
 .btnSignup {
     background-color: #007bff;
     color: #fff;
@@ -36,6 +32,10 @@
 
 .m0 {
     margin: 0;
+}
+
+.textWhite {
+    font-size: 17px;
 }
 
 .textLinks {
@@ -48,5 +48,9 @@
 }
 
 .footerCopyright {
-    font-size: 12px;
+    font-size: 14px;
+}  
+
+.footerHr {
+    margin-bottom: 1px;
 }

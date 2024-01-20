@@ -1,25 +1,35 @@
 // Categories.jsx
+import styles from './Categories.module.css';
 
 
 const Categories = () => {
   const categoriesData = [
-    { id: 1, name: 'Furniture', image: './Assets/furniture.jpg' },
-    { id: 2, name: 'Kitchen', image: './Assets/kitchen.jpg' },
-    { id: 3, name: 'Bathroom', image: './Assets/wc.jpg' },
-    { id: 4, name: 'Electronics', image: './Assets/electronics.jpg' },
-    { id: 5, name: 'Decor', image: './Assets/decor.jpg' },
-    { id: 6, name: 'Miscellaneous', image: './Assets/others.jpg' },
+    { id: 1, name: 'Furniture', image: './images/furniture.jpg' },
+    { id: 2, name: 'Kitchen', image: './images/kitchen.jpg' },
+    { id: 3, name: 'Bathroom', image: './images/wc.jpg' },
+    { id: 4, name: 'Electronics', image: './images/electronics.jpg' },
+    { id: 5, name: 'Decor', image: './images/decor.jpg' },
+    { id: 6, name: 'Miscellaneous', image: './images/others.jpg' },
   ];
   
   return (
-    <div id="category-container">
-      {categoriesData.map((category) => (
-        <div key={category.id}>
-          <h3>{category.name}</h3>
-          <img src={category.image} alt={category.name} className="product-img" />
-          {/* Here comes category picture presentation */}
-        </div>
-      ))}
+    <div id={styles['category-container']}>
+      <div className={styles['category-grid']}>
+        {categoriesData.map((category) => (
+          <div className={styles['card']} key={category.id}>
+            <a href="#">
+              <img src={category.image} alt={category.name} className={styles['product-img']} />
+            </a>
+            <div className={`${styles['card-body']} pb-0`}>
+              <a href="#">
+                <h4 className={`${styles['mb-0']} ${styles['product-link']} pb-3 ${styles['secondary']}`}>
+                  {category.name}
+                </h4>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

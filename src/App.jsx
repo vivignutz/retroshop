@@ -12,11 +12,9 @@ function App() {
   return (
       <div>
         <NavbarComponent />
-        {/* <HeroSection /> */}
+         {/*<HeroSection /> */}
         <Categories />
-
         <Footer />
-        <ContactForm />
       </div>
   );
 }

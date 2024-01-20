@@ -56,10 +56,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr />
+      <hr className={styles.footerHr} />
 
       {/* Copyright */}
-      <div className={`${styles.footerCopyright} ${styles.textWhite} text-center py-3`}>© 2023 Copyright: all rights reserved</div>
+      <div className={`${styles.footerCopyright} ${styles.textWhite} text-center py-3`}>
+        ©2024 Old Shop: all rights reserved
+      </div>
     </footer>
   );
 };

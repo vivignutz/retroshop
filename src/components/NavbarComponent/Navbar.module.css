@@ -4,8 +4,7 @@
     height: 90px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #d8d5d57f;
-    color: #1e1d1d;
+    background-color: #586d06;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,18 +22,21 @@
 
 .navContainer a {
     text-decoration: none;
-    color: #1e1d1d;
+    color: whitesmoke;
     padding-right: 1rem;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.30rem;
 }
 
 .navContainer a:hover {
     filter: drop-shadow(0 0 2em #d33535aa);
 }
 
+.brand {
+    font-size: 2rem;
+
+}
 
 .logoShop {
-    
     height: 4em;
     /*padding: 0, 0.4em, 0 0.4em;*/
     will-change: filter;

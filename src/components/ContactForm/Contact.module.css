@@ -18,8 +18,10 @@
 
 .formControl {
     width: 100%;
-    padding: 8px;
     box-sizing: border-box;
+    margin: 5px 0px;
+    padding: 8px 10px;
+    border-radius: 5px;
 }
 
 .submitButton {

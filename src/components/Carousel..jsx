@@ -1,5 +1,5 @@
 // CarouselCategories.jsx
-import React from 'react';
+
 
 const Carousel = () => {
   return (

@@ -18,7 +18,7 @@ const NavbarComponent = () => {
           </Link>
 
           <div className="brand-text ml-2">
-            <span>Old Shop</span>
+            <span className="brand">Old Shop</span>
           </div>
         </Navbar.Brand>
 
