@@ -1,13 +1,10 @@
 /* Contact.module.css */
-
-/* Contact.module.css */
-
 .contactForm {
     margin-top: 20px;
 }
 
 .formGroup {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .formLabel {
@@ -25,7 +22,7 @@
 }
 
 .submitButton {
-    background-color: #007bff;
+    background-color: #586d06;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -34,5 +31,5 @@
 }
 
 .submitButton:hover {
-    background-color: #0056b3;
+    background-color: #b8aa63;
 }

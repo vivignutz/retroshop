@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     background-color: #b5ad83;
-    /*border: 1px solid #ddd;*/
+    border: 1px solid #ddd;
     border-radius: 0.30rem;
     text-align: center;
     overflow: hidden; 

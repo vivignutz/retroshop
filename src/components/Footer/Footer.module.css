@@ -25,8 +25,46 @@
     margin: 0 15px;
 }
 
-.btnSignup {
+/*
+._btnSignup {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-decoration: none;
+    color: #fff;
     background-color: #007bff;
+}
+
+._btnSignup:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004275;
+    text-decoration: none;
+}
+
+.btnSignup:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    text-decoration: none;
+}
+
+.btnSignup svg {
+    margin-right: 0.5rem;
+}
+*/
+._customBtn btn{
+    /* Adicione os estilos desejados para o botão aqui */
+    background-color: #ff5733; /* Cor de exemplo */
+    border: 2px solid #ff5733;
     color: #fff;
 }
 
@@ -38,9 +76,27 @@
     font-size: 17px;
 }
 
+.col h3 {
+    font-size: 24px;
+}
+
 .textLinks {
     display: flex;
     align-items: center;
+    color: #2E2D29;
+}
+
+.socialIcon {
+    color: #586d06;
+    margin-right: 10px; 
+}
+
+.socialIcon:hover {
+    background-color: #b8aa63;
+}
+
+.iconSpacer {
+    margin-right: 10px;
 }
 
 .ms3 {

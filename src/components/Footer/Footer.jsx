@@ -1,7 +1,7 @@
 // Footer.jsx
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './Footer.module.css';
 import ContactForm from '../ContactForm/Contact'; 
 
@@ -14,37 +14,53 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.col}>
+
+            {/* About */}
             <h3 className={styles.textWhite}>About</h3>
             <hr />
 
-            <p className={styles.textWhite}>Made by Viviane Gnutzmann with LOVE</p>
-            <p className={styles.textWhite}>A project for ReDi School: Full Stack Web Development Bootcamp.</p>
-            <a href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit my GitHub"
-              className={`btn ${styles.btnSignup}`}>
-              <FontAwesomeIcon
-                icon={faGithub} />
-              Visit my GitHub
-            </a>
+            <p className={styles.textWhite}>
+              Made by Viviane Gnutzmann with LOVE{' '}
+              <FontAwesomeIcon icon={faHeart} color="red" />
+            </p>
+
+            <p className={styles.textWhite}>A project for ReDi School: <br />
+            Full Stack Web Development Bootcamp</p>
+
             <p className={styles.textWhite}>This website was made for educational purposes only.</p>
             <hr />
 
-            <p className={`${styles.m0} ${styles.textLinks} ${styles.textWhite}`}>Follow us:
+            {/* Social links */}
+            <p className={`${styles.m0} ${styles.textLinks} ${styles.textWhite}`}>
+              Follow me:
+              <span className={styles.iconSpacer}></span>
               <a href="http://www.facebook.com" title="Find us on Facebook">
-                <i style={{ color: '#fff' }} className={`fab fa-facebook-square ${styles.ms3}`}></i>
+                <i className={`fab fa-facebook-square ${styles.ms3} ${styles.socialIcon}`}></i>
               </a>
               <a href="http://www.twitter.com" title="Follow us on Twitter">
-                <i style={{ color: '#fff' }} className={`fab fa-twitter-square ${styles.ms3}`}></i>
+                <i className={`fab fa-twitter-square ${styles.ms3} ${styles.socialIcon}
+                `}></i>
               </a>
               <a href="http://www.instagram.com" title="Follow us on Instagram">
-                <i style={{ color: '#fff' }} className={`fab fa-instagram-square ${styles.ms3}`}></i>
+                <i className={`fab fa-instagram-square ${styles.ms3} ${styles.socialIcon}`}></i>
               </a>
               <a href="http://www.youtube.com.com" title="Visit us on YouTube">
-                <i style={{ color: '#fff' }} className={`fab fa-youtube-square ${styles.ms3}`}></i>
+                <i className={`fab fa-youtube-square ${styles.ms3} ${styles.socialIcon}
+                `}></i>
               </a>
             </p>
+
+            {/* GitHub button */}
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my GitHub"
+              className={`btn ${styles.btnSignup} ${styles.customBtn}`}
+            >
+              <i className={`fab fa-github ${styles.ms3} ${styles.socialIcon}`}></i>
+              Visit my GitHub
+            </a>
           </div>
 
           <div className={`col d-none d-lg-block ${styles.col}`}>
