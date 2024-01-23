@@ -2,6 +2,7 @@
 
 .footer {
     color: #2E2D29;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .darkBg {
@@ -61,23 +62,25 @@
     margin-right: 0.5rem;
 }
 */
-._customBtn btn{
-    /* Adicione os estilos desejados para o botão aqui */
-    background-color: #ff5733; /* Cor de exemplo */
+.btn.customBtn {
+    background-color: #ff5733; /* Cor desejada */
     border: 2px solid #ff5733;
     color: #fff;
+    cursor: pointer;
+    border: 2px solid red !important;
 }
 
 .m0 {
     margin: 0;
 }
 
-.textWhite {
+.textWhite { /* paragrafos */ 
     font-size: 17px;
 }
 
-.col h3 {
+.col h3 { /* titulo */
     font-size: 24px;
+    font-weight: 600;
 }
 
 .textLinks {

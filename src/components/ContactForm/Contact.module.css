@@ -1,6 +1,7 @@
 /* Contact.module.css */
 .contactForm {
     margin-top: 20px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .formGroup {
@@ -26,7 +27,7 @@
     color: #fff;
     padding: 10px 15px;
     border: none;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 16px;
 }
 

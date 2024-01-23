@@ -24,6 +24,7 @@
 
 h4 {
     font-size: 40px;
+    font-family: 'DM Sans', sans-serif;
     text-transform: uppercase;
     color: #662C10;
     text-decoration: none;
@@ -45,6 +46,7 @@ h4 {
 
 h3 {
     font-size: 1.75rem;
+    font-family: 'DM Sans', sans-serif;
     text-align: center;
 }
 

@@ -13,9 +13,14 @@ const Footer = () => {
     <footer className={`${styles.footer} mt-auto py-3 ${styles.darkBg}`}>
       <div className={styles.container}>
         <div className={styles.row}>
-          <div className={styles.col}>
+          <div className={`col d-lg-none ${styles.col}`}>
+            <h3 className={styles.textWhite}>Contact</h3>
+            <hr />
 
-            {/* About */}
+            <ContactForm />
+          </div>
+
+          <div className={`col d-none d-lg-block ${styles.col}`}>
             <h3 className={styles.textWhite}>About</h3>
             <hr />
 
@@ -56,7 +61,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit my GitHub"
-              className={`btn ${styles.btnSignup} ${styles.customBtn}`}
+              className={`${styles.customBtn} btn`}
             >
               <i className={`fab fa-github ${styles.ms3} ${styles.socialIcon}`}></i>
               Visit my GitHub
