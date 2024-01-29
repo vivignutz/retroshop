@@ -12,13 +12,12 @@ const NavbarComponent = () => {
       style={{ zIndex: 9000 }}
     >
       <Container className={styles.navContainer}>
-        <Navbar.Brand as="div" className="d-flex align-items-center">
-          <Link to="/">
+        <Navbar.Brand as={Link} to="/" className={styles.brandLink}>
+          <div className="d-flex align-items-center">
             <img src="/logo.gif" className={styles.logoShop} alt="Animated Logo" />
-          </Link>
-
-          <div className="brand-text ml-2">
-            <span className="brand">Old Shop</span>
+            <div className={`brand-text ml-2 ${styles.brandText}`}>
+              <span className="brand">Old Shop</span>
+            </div>
           </div>
         </Navbar.Brand>
 

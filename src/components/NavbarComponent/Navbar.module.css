@@ -1,74 +1,53 @@
 /* Navbar.module.css */
+
 .NavBar {
-    max-width: 1280px;
-    height: 90px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #586d06;
-    font-family: 'DM Sans', sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #586d06;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 .navContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.navContainer span {
-    font-size: 1.5rem; /* 24px -> 16px = 1rem*/
-    font-weight: 600;
-}
-
-.navContainer a {
+/* Logo and Shop name */
+.brandLink {
     text-decoration: none;
     color: whitesmoke;
-    padding-right: 1rem;
-    font-size: 1.30rem;
-}
-
-.navContainer a:hover {
-    filter: drop-shadow(0 0 2em #d33535aa);
-}
-
-.brand {
-    font-size: 2rem;
-
 }
 
 .logoShop {
-    height: 4em;
-    /*padding: 0, 0.4em, 0 0.4em;*/
+    width: 70px;
+    max-height: 100%;
     will-change: filter;
     transition: filter 300ms;
 }
 
-.logo:hover {
-    filter: drop-shadow(0 0 2em #d33535aa);
+.logoShop:hover {
+    filter: drop-shadow(0 0 2em #ea2727aa);
 }
 
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.brand-text {
+    font-weight: 700;
+    /* Adicione estilos conforme necessário para a área de texto da marca */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .logo-shop {
-        animation: logo-spin infinite 30s linear;
-    }
+.brand {
+    font-weight: bold;
 }
 
-#products {
-    padding: 1em;
-    background-color: #b6b4b48c;
-    border: #1e1d1d;
+
+/* Nav Links  */
+.navbar-nav .nav-link {
+    color: whitesmoke;
+    margin-right: 15px;
 }
 
-.read-the-docs {
-    color: #888;
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid whitesmoke;
 }
