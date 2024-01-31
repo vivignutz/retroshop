@@ -1,0 +1,78 @@
+/* Navbar.module.css */
+
+/* Navbar Styles */
+.Header {
+    display: flex;
+    width: fit-content;
+    background-color: #586d06;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    padding: 0,5rem;
+}
+
+/* Logo and Shop name */
+.navbarBrand {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.logoShop {
+    width: 90px;
+    max-height: 100%;
+    will-change: filter;
+    transition: filter 300ms;
+    margin-left: 20px;
+}
+
+.logoShop:hover {
+    filter: drop-shadow(0 0 2em #ea2727aa);
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.brandText {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+.brand-container  {
+    display: flex;
+}
+
+
+/* Nav Links  */
+.navbarNav {
+    list-style: none;
+    padding: 0;
+}
+
+.navbarNav a {
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: 25px;
+
+}
+
+.navbarNav a:hover {
+    color: #ea2727aa; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Toggler button */
+.customNavbarToggler {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    cursor: pointer;
+    padding: 0; /* Sem preenchimento */
+    margin-right: 20px; /* Espaçamento à direita */
+}
+
+.customNavbarToggler:focus {
+    outline: none; /* Remover contorno ao focar */
+}
+
+.customNavbarToggler .navbar-toggler-icon {
+    background-color: #fff; /* Cor do ícone do botão */
+}

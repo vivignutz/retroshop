@@ -1,21 +1,13 @@
-// App.jsx
+// App.jsx (configurações e layout principal do aplicativo)
+import AppRoutes from './routes';
 
-import NavbarComponent from "./components/NavbarComponent/Navbar.jsx";
-import Categories from "./components/Categories/Categories.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-//import Hero from "./components/HeroComponent/Hero.jsx";
-//import ProductList from "./components/ProductList.jsx"
 import './App.css';
-
 
 function App() {
   return (
-      <div>
-        <NavbarComponent />
-        {/* <Hero /> */}
-        <Categories />
-        <Footer />
-      </div>
+    <div>
+      <AppRoutes />
+    </div>
   );
 }
 

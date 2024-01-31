@@ -1,37 +1,35 @@
 // Footer.jsx
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import styles from './Footer.module.css';
-import ContactForm from '../ContactForm/Contact'; 
+import ContactForm from '../ContactForm/Contact';
 
+import styles from './Footer.module.css';
 
 const Footer = () => {
   const githubUrl = 'https://github.com/vivignutz/';
 
   return (
-    <footer className={`${styles.footer} mt-auto py-3 ${styles.darkBg}`}>
-      <div className={styles.container}>
-        <div className={styles.row}>
-          <div className={`col d-lg-none ${styles.col}`}>
+    <footer className={`${styles.footer} mt-auto py-3 ${styles.darkBackground}`}>
+      <div className={`container ${styles.container}`}>
+        <div className="row">
+
+          {/* Smaller screens column */}
+          <div className="col d-lg-none">
             <h3 className={styles.textWhite}>Contact</h3>
             <hr />
-
             <ContactForm />
           </div>
 
-          <div className={`col d-none d-lg-block ${styles.col}`}>
+          {/* Main column */}
+          <div className="col d-none d-lg-block">
             <h3 className={styles.textWhite}>About</h3>
             <hr />
-
             <p className={styles.textWhite}>
               Made by Viviane Gnutzmann with LOVE{' '}
               <FontAwesomeIcon icon={faHeart} color="red" />
             </p>
-
             <p className={styles.textWhite}>A project for ReDi School: <br />
-            Full Stack Web Development Bootcamp</p>
-
+              Full Stack Web Development Bootcamp</p>
             <p className={styles.textWhite}>This website was made for educational purposes only.</p>
             <hr />
 
@@ -43,15 +41,13 @@ const Footer = () => {
                 <i className={`fab fa-facebook-square ${styles.ms3} ${styles.socialIcon}`}></i>
               </a>
               <a href="http://www.twitter.com" title="Follow us on Twitter">
-                <i className={`fab fa-twitter-square ${styles.ms3} ${styles.socialIcon}
-                `}></i>
+                <i className={`fab fa-twitter-square ${styles.ms3} ${styles.socialIcon}`}></i>
               </a>
               <a href="http://www.instagram.com" title="Follow us on Instagram">
                 <i className={`fab fa-instagram-square ${styles.ms3} ${styles.socialIcon}`}></i>
               </a>
               <a href="http://www.youtube.com.com" title="Visit us on YouTube">
-                <i className={`fab fa-youtube-square ${styles.ms3} ${styles.socialIcon}
-                `}></i>
+                <i className={`fab fa-youtube-square ${styles.ms3} ${styles.socialIcon}`}></i>
               </a>
             </p>
 
@@ -61,17 +57,17 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit my GitHub"
-              className={`${styles.customBtn} btn`}
+              className={`btn ${styles.customBtn}`}
             >
               <i className={`fab fa-github ${styles.ms3} ${styles.socialIcon}`}></i>
               Visit my GitHub
             </a>
           </div>
 
-          <div className={`col d-none d-lg-block ${styles.col}`}>
+          {/* Second column for desktop */}
+          <div className="col d-none d-lg-block">
             <h3 className={styles.textWhite}>Contact</h3>
             <hr />
-
             <ContactForm />
           </div>
         </div>
