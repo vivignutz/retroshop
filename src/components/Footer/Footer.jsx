@@ -23,6 +23,8 @@ const Footer = () => {
         Made by Viviane Gnutzmann with LOVE{' '}
         <FontAwesomeIcon icon={faHeart} color="red" />
       </p>
+      <hr />
+
       <p className={styles.textAbout}>A project for ReDi School: <br />
         Full Stack Web Development Bootcamp</p>
       <p className={styles.textAbout}>This website was made for educational purposes only.</p>
@@ -64,14 +66,15 @@ const Footer = () => {
     <footer className={`${styles.footer} mt-auto py-2`}>
       <div className={`container ${styles.container}`}>
         <div className={`row ${styles.row}`}>
-          {/* Smaller screens column */}
-          {renderContactColumn('Contact', 'd-lg-none')}
-
-          {/* Second column for desktop */}
-          {renderContactColumn('Contact', 'd-none d-lg-block')}
 
           {/* Main column */}
           {renderAboutColumn()}
+          
+          {/* Second column for desktop */}
+          {renderContactColumn('Contact', 'd-none d-lg-block')}
+
+          {/* Smaller screens column */}
+          {renderContactColumn('Contact', 'd-lg-none')}
         </div>
       </div>
 

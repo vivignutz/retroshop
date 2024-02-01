@@ -13,7 +13,7 @@
 /* Logo and Shop name */
 .navbarBrand {
     text-decoration: none;
-    color: whitesmoke;
+    color: #f5f5f5;
 }
 
 .logoShop {
@@ -45,14 +45,14 @@
 .navbarNav {
     list-style: none;
     padding: 0;
+    margin-left: 40%;
 }
 
 .navbarNav a {
     font-size: 20px;
-    color: whitesmoke;
+    color: #f5f5f5;
     text-decoration: none;
     margin-right: 25px;
-
 }
 
 .navbarNav a:hover {
@@ -62,17 +62,11 @@
 
 /* Toggler button */
 .customNavbarToggler {
-    background-color: transparent; /* Fundo transparente */
-    border: none; /* Sem borda */
-    cursor: pointer;
-    padding: 0; /* Sem preenchimento */
-    margin-right: 20px; /* Espaçamento à direita */
+    background-color: transparent;
+    margin-right: 50px;
 }
 
 .customNavbarToggler:focus {
-    outline: none; /* Remover contorno ao focar */
+    outline: none;
 }
 
-.customNavbarToggler .navbar-toggler-icon {
-    background-color: #fff; /* Cor do ícone do botão */
-}

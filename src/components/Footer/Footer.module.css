@@ -13,7 +13,7 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -22,11 +22,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 20 auto;
+    padding: 10px 5px;
 }
 
 /* Columns */
 .col {
-    flex: 5;
+    flex: 1;
+    max-width: 50%;
     margin: 0 15px;
     text-align: left;
 }
@@ -39,6 +44,11 @@
 .col h3 {
     font-size: 24px;
     font-weight: 600;
+}
+
+.col.undefined {
+    flex: 1; /* Ou outro valor conforme necessário */
+    margin: 0 15px;
 }
 
 .contactTitle,

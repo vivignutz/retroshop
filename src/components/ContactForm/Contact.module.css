@@ -1,11 +1,15 @@
 /* Contact.module.css */
 .contactForm {
-    margin-top: 20px;
+    width: 100%;
+    margin: 0 auto;
+    /*margin-top: 20px;*/
     font-family: 'DM Sans', sans-serif;
 }
 
 .formGroup {
+    align-items: center;
     margin-bottom: 5px;
+    justify-content: center;
 }
 
 .formLabel {
@@ -33,4 +37,11 @@
 
 .submitButton:hover {
     background-color: #b8aa63;
+}
+
+/* Seletor específico para a coluna que contém o formulário */
+.col.d-lg-none,
+.col.d-none.d-lg-block {
+    flex: 1; /* Ou outro valor conforme necessário */
+    margin: 0 15px;
 }
