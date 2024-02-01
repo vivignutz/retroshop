@@ -18,7 +18,7 @@ const Hero = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/caroussel2.png"
+            src="/images/caroussell2.png"
             alt="Second slide"
           />
         </Carousel.Item>

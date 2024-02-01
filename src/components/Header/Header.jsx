@@ -21,13 +21,11 @@ const Header = () => {
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <button
-          className={`navbar-toggler ${styles.customNavbarToggler}`}
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#basic-navbar-nav"
-          aria-controls="basic-navbar-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+            className={`navbar-toggler ${styles.customNavbarToggler}`}
+            type="button"
+            aria-controls="basic-navbar-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
           <span className="navbar-toggler-icon"></span>
           </button>

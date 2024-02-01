@@ -2,13 +2,14 @@
 
 .footer {
     display: flex;
-    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #d8d5d57f;
     color: #2E2D29;
     font-family: 'DM Sans', sans-serif;
-}
-
-.darkBackground {
-    background-color: #d8d5d57f;
+    font-weight: bold;
 }
 
 .container {
@@ -23,43 +24,52 @@
     justify-content: space-between;
 }
 
+/* Columns */
 .col {
-    flex: 1;
+    flex: 5;
     margin: 0 15px;
+    text-align: left;
 }
 
-.btn.customBtn {
-    background-color: #ff5733;
-    border: 2px solid #ff5733;
-    color: #fff;
-    cursor: pointer;
-    border: 2px solid red
+.col + .col {
+    margin-left: 15px;
 }
 
-.btn.customBtn {
-    background-color: #ff5733; /* Cor desejada */
-    border: 2px solid #ff5733;
-    color: #fff;
-    cursor: pointer;
-    border: 2px solid red
-}
-
-.m0 {
-    margin: 0;
-}
-
-.textWhite { /* Paragraphers */ 
-    font-size: 17px;
-}
-
-.col h3 { /* Title */
+/* Titles and texts */
+.col h3 {
     font-size: 24px;
     font-weight: 600;
 }
 
+.contactTitle,
+.aboutTitle {
+    font-size: 24px;
+}
+
+.textAbout {
+    text-align: left;
+    font-size: 17px;
+}
+
+/* GitHub button */
+.btn.customBtn {
+    background-color: #0366d6; /* Cor de fundo desejada */
+    color: #fff; /* Cor do texto */
+    border: 2px solid #0366d6; /* Cor da borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.btn.customBtn:hover {
+    background-color: #024682; /* Cor de fundo ao passar o mouse */
+    border-color: #024682; /* Cor da borda ao passar o mouse */
+}
+
+/* Social media Icons */
 .textLinks {
     display: flex;
     align-items: center;
+    justify-content: center;
     color: #2E2D29;
 }
 
@@ -76,47 +86,16 @@
     margin-right: 10px;
 }
 
-.ms3 {
-    margin-left: 3px;
+/* Break lines */
+.footerHr {
+    margin-bottom: 3px;
 }
 
+/* Copyright text */
 .footerCopyright {
     font-size: 14px;
-}  
-
-.footerHr {
-    margin-bottom: 1px;
-}
-
-.footerHr {
-    margin-bottom: 1px;
-}
-
-.footerCopyright {
-    font-size: 14px;
-    color: #fff;
-}
-
-/* Social Links */
-.textLinks {
-    display: flex;
-    align-items: center;
     color: #2E2D29;
-}
-
-.socialIcon {
-    color: #586d06;
-    margin-right: 10px;
-}
-
-.socialIcon:hover {
-    background-color: #b8aa63;
-}
-
-.iconSpacer {
-    margin-right: 10px;
-}
-
-.ms3 {
-    margin-left: 3px;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
 }

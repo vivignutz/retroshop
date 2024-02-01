@@ -1,4 +1,4 @@
-// main.jsx (importações de estilos globais, bibliotecas externas e renderização do componente)
+// main.jsx
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';

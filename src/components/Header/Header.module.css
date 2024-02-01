@@ -3,11 +3,11 @@
 /* Navbar Styles */
 .Header {
     display: flex;
-    width: fit-content;
+    width: 100%;
     background-color: #586d06;
     color: #fff;
     font-family: 'DM Sans', sans-serif;
-    padding: 0,5rem;
+    padding: 0.5rem;
 }
 
 /* Logo and Shop name */
