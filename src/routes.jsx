@@ -2,8 +2,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import Cart from "./pages/Cart/Cart";
 import ProductCard from "./pages/ProductCard/ProductCard";
+import Cart from "./pages/Cart/Cart";
 //import App from "./App";
 
 function AppRoutes() {
@@ -12,8 +12,8 @@ function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/cart" element={<Cart />} />
                 <Route path="/product" element={<ProductCard />} />
+                <Route path="/cart" element={<Cart />} />
             </Routes>
         </Router>
     );

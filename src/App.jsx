@@ -1,9 +1,8 @@
 // App.jsx (configurações e layout principal do aplicativo)
 import AppRoutes from './routes';
-
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div>
       <AppRoutes />

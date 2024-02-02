@@ -1,10 +1,15 @@
 // about.jsx
 
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
+
 const About = () => {
     return (
-        <div>
-            <h1>About Us</h1>
-        </div>
+            <>
+                <Header />
+                <h1>About Us</h1>
+                <Footer />
+            </>
     );
 }
 

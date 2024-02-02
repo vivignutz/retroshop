@@ -1,7 +1,7 @@
 // Footer.jsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import ContactForm from '../ContactForm/Contact';
+import ContactForm from '../../pages/ContactForm/Contact';
 import styles from './Footer.module.css';
 
 const Footer = () => {
