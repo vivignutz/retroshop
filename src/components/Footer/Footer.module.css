@@ -15,14 +15,11 @@
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 15px 0 15px 0;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: row;
     max-width: 1200px;
     margin: 20 auto;
     padding: 10px 5px;
@@ -36,9 +33,6 @@
     text-align: left;
 }
 
-.col + .col {
-    margin-left: 15px;
-}
 
 /* Titles and texts */
 .col h3 {
@@ -109,3 +103,16 @@
     padding: 10px 0;
     width: 100%;
 }
+
+/*
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}*/

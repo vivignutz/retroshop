@@ -2,9 +2,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import ProductCard from "./pages/ProductCard/ProductCard";
+import ProductList from "./components/ProductList/ProductList";
+//import ProductCard from "./pages/ProductCard/ProductCard";
 import Cart from "./pages/Cart/Cart";
-//import App from "./App";
+
 
 function AppRoutes() {
     return (
@@ -12,7 +13,7 @@ function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/product" element={<ProductCard />} />
+                <Route path="/products" element={<ProductList />} />
                 <Route path="/cart" element={<Cart />} />
             </Routes>
         </Router>

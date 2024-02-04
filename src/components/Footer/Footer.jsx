@@ -16,7 +16,7 @@ const Footer = () => {
   );
 
   const renderAboutColumn = () => (
-    <div className={`col ${styles.mainColumn}`}>
+    <div className={`col-lg-6 ${styles.aboutColumn}`}>
       <h3 className={styles.aboutTitle}>About</h3>
       <hr />
       <p className={styles.textAbout}>
@@ -66,15 +66,17 @@ const Footer = () => {
     <footer className={`${styles.footer} mt-auto py-2`}>
       <div className={`container ${styles.container}`}>
         <div className={`row ${styles.row}`}>
-
-          {/* Main column */}
-          {renderAboutColumn()}
-          
-          {/* Second column for desktop */}
-          {renderContactColumn('Contact', 'd-none d-lg-block')}
-
-          {/* Smaller screens column */}
-          {renderContactColumn('Contact', 'd-lg-none')}
+  
+          {/* Contact column (visible on desktop, hidden on smaller screens) */}
+          <div className={`col-lg-6 d-lg-none`}>
+            {renderContactColumn('Contact')}
+          </div>
+  
+          {/* About column (full-width on smaller screens, on the right on desktop) */}
+          <div className={`col-lg-6 order-2 order-lg-1 ${styles.aboutColumn}`}>
+            {renderAboutColumn()}
+          </div>
+  
         </div>
       </div>
 
