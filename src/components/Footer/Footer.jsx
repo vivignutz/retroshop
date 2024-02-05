@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from '../../pages/ContactForm/Contact';
 import styles from './Footer.module.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const githubUrl = 'https://github.com/vivignutz/';
@@ -23,10 +24,12 @@ const Footer = () => {
         Made by Viviane Gnutzmann with LOVE{' '}
         <FontAwesomeIcon icon={faHeart} color="red" />
       </p>
-      <hr />
+      <br />
 
       <p className={styles.textAbout}>A project for ReDi School: <br />
         Full Stack Web Development Bootcamp</p>
+      <br />
+
       <p className={styles.textAbout}>This website was made for educational purposes only.</p>
       <hr />
 
@@ -34,31 +37,27 @@ const Footer = () => {
         <p className={`${styles.textLinks}`}>
         Follow me:
         <span className={styles.iconSpacer}></span>
-        <a href="http://www.facebook.com" title="Find us on Facebook">
+
+        <Link to="http://www.facebook.com" title="Find us on Facebook" className={styles.iconLink}>
           <i className={`fab fa-facebook-square ${styles.socialIcon}`}></i>
-        </a>
-        <a href="http://www.twitter.com" title="Follow us on Twitter">
+        </Link>
+
+        <Link to="http://www.twitter.com" title="Follow us on Twitter" className={styles.iconLink}>
           <i className={`fab fa-twitter-square ${styles.socialIcon}`}></i>
-        </a>
-        <a href="http://www.instagram.com" title="Follow us on Instagram">
+        </Link>
+        <Link to="http://www.instagram.com" title="Follow us on Instagram" className={styles.iconLink}>
           <i className={`fab fa-instagram-square ${styles.socialIcon}`}></i>
-        </a>
-        <a href="http://www.youtube.com.com" title="Visit us on YouTube">
+        </Link>
+        <Link to="http://www.youtube.com.com" title="Visit us on YouTube" className={styles.iconLink}>
           <i className={`fab fa-youtube-square ${styles.socialIcon}`}></i>
-        </a>
+        </Link>
       </p>
 
       {/* GitHub button */}
-      <a
-        href={githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Visit my GitHub"
-        className={`btn ${styles.customBtn}`}
-      >
-        <i className={`fab fa-github ${styles.githubIconMargin} ${styles.socialIcon}`}></i>
+      <Link to={githubUrl} className={`btn customBtn ${styles.customBtn}`} target="_blank" rel="noopener noreferrer">
+        <i className={`fab fa-github ${styles.githubIconMargin}`}></i>
         Visit my GitHub
-      </a>
+      </Link>
     </div>
   );
 
@@ -66,17 +65,17 @@ const Footer = () => {
     <footer className={`${styles.footer} mt-auto py-2`}>
       <div className={`container ${styles.container}`}>
         <div className={`row ${styles.row}`}>
-  
-          {/* Contact column (visible on desktop, hidden on smaller screens) */}
-          <div className={`col-lg-6 d-lg-none`}>
-            {renderContactColumn('Contact')}
-          </div>
-  
-          {/* About column (full-width on smaller screens, on the right on desktop) */}
-          <div className={`col-lg-6 order-2 order-lg-1 ${styles.aboutColumn}`}>
+
+          {/* About column */}
+          <div className={`col-lg-6 order-lg-1 text-start`}>
             {renderAboutColumn()}
           </div>
   
+          {/* Contact column */}
+          <div className={`col-lg-6 order-lg-2 ${styles.contactColumn}`}>
+            {renderContactColumn('Contact', 'd-none d-lg-block')}
+            {renderContactColumn('Contact', 'd-lg-none')}
+          </div>
         </div>
       </div>
 

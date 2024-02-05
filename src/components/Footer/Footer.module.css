@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     width: 100%;
     background-color: #d8d5d57f;
     color: #2E2D29;
@@ -13,15 +12,12 @@
 }
 
 .container {
-    max-width: 100%;
     margin: 0 auto;
     padding: 15px 0 15px 0;
 }
 
 .row {
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 20 auto;
     padding: 10px 5px;
 }
 
@@ -33,6 +29,10 @@
     text-align: left;
 }
 
+.contactColumn {
+    padding-top: 20px;
+}
+
 
 /* Titles and texts */
 .col h3 {
@@ -40,10 +40,6 @@
     font-weight: 600;
 }
 
-.col.undefined {
-    flex: 1; /* Ou outro valor conforme necessário */
-    margin: 0 15px;
-}
 
 .contactTitle,
 .aboutTitle {
@@ -55,25 +51,45 @@
     font-size: 17px;
 }
 
-/* GitHub button */
-.btn.customBtn {
-    background-color: #0366d6; /* Cor de fundo desejada */
-    color: #fff; /* Cor do texto */
-    border: 2px solid #0366d6; /* Cor da borda */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
+.text-start {
+    text-align: left!important;
+    padding-bottom: 20px;
+    width: fit-content
 }
 
-.btn.customBtn:hover {
-    background-color: #024682; /* Cor de fundo ao passar o mouse */
-    border-color: #024682; /* Cor da borda ao passar o mouse */
+/* GitHub button */
+.customBtn,
+a.customBtn,
+.customBtn:link,
+a.customBtn:link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #586d06;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.customBtn:hover,
+a.customBtn:hover {
+    background-color: #37410d;
+    color: #fff;
+}
+
+/* GitHub icon */
+.customBtn i.fab.fa-github {
+    color: #fff; /* Cor do ícone */
+}
+
+.customBtn .githubIconMargin {
+    margin-right: 6px;
 }
 
 /* Social media Icons */
 .textLinks {
     display: flex;
     align-items: center;
-    justify-content: center;
     color: #2E2D29;
 }
 
@@ -92,6 +108,7 @@
 
 /* Break lines */
 .footerHr {
+    width: auto;
     margin-bottom: 3px;
 }
 
@@ -103,16 +120,3 @@
     padding: 10px 0;
     width: 100%;
 }
-
-/*
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}*/
