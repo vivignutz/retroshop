@@ -48,7 +48,7 @@ const Footer = () => {
         <Link to="http://www.instagram.com" title="Follow us on Instagram" className={styles.iconLink}>
           <i className={`fab fa-instagram-square ${styles.socialIcon}`}></i>
         </Link>
-        <Link to="http://www.youtube.com.com" title="Visit us on YouTube" className={styles.iconLink}>
+        <Link to="http://www.youtube.com" title="Visit us on YouTube" className={styles.iconLink}>
           <i className={`fab fa-youtube-square ${styles.socialIcon}`}></i>
         </Link>
       </p>

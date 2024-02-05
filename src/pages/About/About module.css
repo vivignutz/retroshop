@@ -1,0 +1,82 @@
+/* About.modules.css */
+
+/* About column */
+.aboutColumn {
+    flex: 1;
+    max-width: 50%;
+    margin: 0 15px;
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  /* About Titles and texts */
+  .aboutColumn h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .textAbout {
+    text-align: left;
+    font-size: 17px;
+  }
+  
+  .text-start {
+    text-align: left!important;
+    padding-bottom: 20px;
+    width: fit-content
+  }
+  
+  /* Social media Icons */
+  .textLinks {
+    display: flex;
+    align-items: center;
+    color: #2E2D29;
+  }
+  
+  .socialIcon {
+    color: #586d06;
+    margin-right: 10px; 
+  }
+  
+  .socialIcon:hover {
+    background-color: #b8aa63;
+  }
+  
+  .iconSpacer {
+    margin-right: 10px;
+  }
+  
+  /* GitHub button */
+  .customBtn,
+  a.customBtn,
+  .customBtn:link,
+  a.customBtn:link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #586d06;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 3px;
+  }
+  
+  .customBtn:hover,
+  a.customBtn:hover {
+    background-color: #37410d;
+    color: #fff;
+  }
+  
+  /* GitHub icon */
+  .customBtn i.fab.fa-github {
+    color: #fff; /* Cor do ícone */
+  }
+  
+  .customBtn .githubIconMargin {
+    margin-right: 6px;
+  }
+  
+  /* Break lines */
+  .aboutHr {
+    width: auto;
+    margin-bottom: 3px;
+  }
