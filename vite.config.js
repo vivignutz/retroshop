@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
+// vite.config.js
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
+export default ({
   plugins: [react()],
   server: {
     proxy: {
@@ -12,10 +12,21 @@ export default defineConfig({
       },
     },
   },
-  resolve: {
-  },
+
   build: {
-    assetsDir: 'assets',
+    assetsDir: '.',
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: 'src/main.jsx'
+    }
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'axios'
+    ]
   },
   hmr: {
     overlay: false,

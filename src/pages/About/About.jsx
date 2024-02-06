@@ -1,9 +1,12 @@
 // about.jsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import styles from './About.module.css'
+import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import styles from './About.module.css';
 
 const About = () => {
+    {/*
     const githubUrl = 'https://github.com/vivignutz/';
 
     const renderAboutColumn = () => (
@@ -24,6 +27,7 @@ const About = () => {
             <hr />
 
             {/* Social links */}
+            {/*
             <p className={`${styles.textLinks}`}>
                 Follow me:
                 <span className={styles.iconSpacer}></span>
@@ -45,20 +49,34 @@ const About = () => {
             </p>  
 
             {/* GitHub button */}
+            {/*
             <a href={githubUrl} className={`btn customBtn ${styles.customBtn}`} target="_blank" rel="noopener noreferrer">
                 <i className={`fab fa-github ${styles.githubIconMargin}`}></i>
                 Visit my GitHub
             </a>
         </div>
     );
+    */}
 
     return (
-        <section className={`${styles.about} mt-auto py-2`}>    
-            {/* About column */}
-            <div className={`col-lg-6 order-lg-1 text-start`}>
-                {renderAboutColumn()}
-            </div>
-        </section>
+        <div>
+            <Header />
+            <section className={`${styles.aboutColumn} mt-auto py-2`}>    
+                <div className={`col-lg-6 order-lg-1 text-start`}>
+                    <h3 className={styles.aboutTitle}>About Us</h3>
+                    <br />
+
+                    <p className={styles.textAbout}>
+                        Made by Viviane Gnutzmann with LOVE{' '}
+                        <FontAwesomeIcon icon={faHeart} color="red" />
+                    </p>
+                    <br />
+                    <p className={styles.textAbout}>This website was made for educational purposes only.</p>
+                    <hr />
+                </div>
+            </section>
+            <Footer />
+        </div>
     );
 };
 

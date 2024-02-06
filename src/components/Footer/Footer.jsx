@@ -1,11 +1,12 @@
 // Footer.jsx
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import ContactForm from '../../pages/ContactForm/Contact';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faHeart } from '@fortawesome/free-solid-svg-icons';
+//import ContactForm from '../../pages/ContactForm/Contact';
 import styles from './Footer.module.css';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  {/** 
   const githubUrl = 'https://github.com/vivignutz/';
 
   const renderContactColumn = (title, extraClass = '') => (
@@ -34,6 +35,7 @@ const Footer = () => {
       <hr />
 
         {/* Social links */}
+        {/*
         <p className={`${styles.textLinks}`}>
         Follow me:
         <span className={styles.iconSpacer}></span>
@@ -54,12 +56,14 @@ const Footer = () => {
       </p>
 
       {/* GitHub button */}
+      {/*
       <Link to={githubUrl} className={`btn customBtn ${styles.customBtn}`} target="_blank" rel="noopener noreferrer">
         <i className={`fab fa-github ${styles.githubIconMargin}`}></i>
         Visit my GitHub
       </Link>
     </div>
   );
+  */}
 
   return (
     <footer className={`${styles.footer} mt-auto py-2`}>
@@ -67,14 +71,50 @@ const Footer = () => {
         <div className={`row ${styles.row}`}>
 
           {/* About column */}
+          {/*
           <div className={`col-lg-6 order-lg-1 text-start`}>
             {renderAboutColumn()}
           </div>
   
           {/* Contact column */}
+          {/*
           <div className={`col-lg-6 order-lg-2 ${styles.contactColumn}`}>
             {renderContactColumn('Contact', 'd-none d-lg-block')}
             {renderContactColumn('Contact', 'd-lg-none')}
+          </div>
+        </div>
+      </div>
+
+      <hr className={styles.footerHr} />
+      */}
+
+          {/* Legal pages and links */}
+          <div className={`col-lg-6 order-lg-1 text-start`}>
+            <h3 className={styles.aboutTitle}>Legal Pages</h3>
+            <hr />
+            <ul className={styles.linkList}>
+              <li>
+                <Link to="/about" className={styles.footerLink}>About us</Link>
+              </li>
+              <li>
+                <Link to="/contact" className={styles.footerLink}>Contact</Link>
+              </li>
+              <li>
+                <Link to="/legal" className={styles.footerLink}>Terms and Conditions</Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy" className={styles.footerLink}>Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/return" className={styles.footerLink}>Return and Refund Policy</Link>
+              </li>
+              <li>
+                <Link to="/shipping-policy" className={styles.footerLink}>Shipping Policy</Link>
+              </li>
+              <li>
+                <Link to="/faq" className={styles.footerLink}>FAQ</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
