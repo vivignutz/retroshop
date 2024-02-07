@@ -1,8 +1,8 @@
 // about.jsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header from '../components/Header.jsx'
+import Footer from '../components/Footer.jsx';
 import styles from './About.module.css';
 
 const About = () => {

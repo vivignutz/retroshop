@@ -18,7 +18,7 @@ export default ({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: 'src/main.jsx'
+      input: 'src/index.jsx'
     }
   },
   optimizeDeps: {
