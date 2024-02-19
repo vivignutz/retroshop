@@ -1,9 +1,12 @@
 // about.jsx
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import Header from '../../components/Header/Header.jsx';
+import Announcement from '../../components/Announcement/Announcement.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import styles from './About.module.css';
+
 
 const About = () => {
 
@@ -61,6 +64,7 @@ const About = () => {
 
     return (
         <div>
+            <Announcement />
             <Header />
             <section className={`${styles.aboutColumn} mt-auto py-2`}>    
                 <div className={`col-lg-6 order-lg-1 text-start`}>

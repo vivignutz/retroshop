@@ -100,7 +100,7 @@ const Footer = () => {
                 <Link to="/contact" className={styles.footerLink}>Contact</Link>
               </li>
               <li>
-                <Link to="/legal" className={styles.footerLink}>Terms and Conditions</Link>
+                <Link to="/terms-and-conditions" className={styles.footerLink}>Terms and Conditions</Link>
               </li>
               <li>
                 <Link to="/privacy-policy" className={styles.footerLink}>Privacy Policy</Link>
