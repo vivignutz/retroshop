@@ -1,14 +1,17 @@
 // App.jsx
+//import dotenv from 'dotenv';
+//dotenv.config();
+
 import AppRoutes from './routes';
 import './App.css';
 
 // Defining backend's URL
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
+//const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const App = () => {
   return (
     <div>
-      <AppRoutes backendUrl={backendUrl} />
+      <AppRoutes /*backendUrl={backendUrl}*/ />
     </div>
   );
 }

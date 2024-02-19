@@ -1,10 +1,10 @@
-// HeroSection.jsx
+// SliderSection.jsx
 
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Hero.module.css';
+import './Slider.module.css';
 
-const Hero = () => {
+const Slider = () => {
   return (
     <div>
       <Carousel id="productCarousel" interval={3000} fade>
@@ -41,4 +41,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Slider;
