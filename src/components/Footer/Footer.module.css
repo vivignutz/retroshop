@@ -41,8 +41,7 @@
 }
 
 
-.contactTitle,
-.aboutTitle {
+.footerTitle {
     font-size: 24px;
 }
 
@@ -79,7 +78,7 @@ a.customBtn:hover {
 
 /* GitHub icon */
 .customBtn i.fab.fa-github {
-    color: #fff; /* Cor do ícone */
+    color: #fff;
 }
 
 .customBtn .githubIconMargin {
@@ -87,18 +86,43 @@ a.customBtn:hover {
 }
 
 /* Social media Icons */
-.textLinks {
+.socialIconContainer {
     display: flex;
-    align-items: center;
-    color: #2E2D29;
+    align-items: center; 
 }
 
 .socialIcon {
     color: #586d06;
-    margin-right: 10px; 
+    margin-right: 10px;
+    font-size: 24px;
+    transition: background-color 0.3s;
 }
 
 .socialIcon:hover {
+    background-color: #b8aa63;
+}
+
+.iconSpacer {
+    margin-right: 10px;
+}
+
+/* Payment icons container */
+.paymentIconsContainer {
+    display: flex;
+    align-items: center;
+    color: #586d06;
+    font-size: 24px; 
+    margin-top: 10px; 
+}
+
+.paymentIcon {
+    color: #586d06;
+    margin-right: 10px;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+.paymentIcon:hover {
     background-color: #b8aa63;
 }
 

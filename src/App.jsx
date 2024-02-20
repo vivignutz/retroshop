@@ -1,18 +1,38 @@
 // App.jsx
-//import dotenv from 'dotenv';
-//dotenv.config();
 
-import AppRoutes from './routes';
-import './App.css';
-
-// Defining backend's URL
-//const backendUrl = process.env.REACT_APP_BACKEND_URL;
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AppRoutes from "./routes";
+import Announcement from "./components/Announcement/Announcement";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
+  const [backendData, setBackendData] = useState(null);
+
+  // // Accessing environment variable directly:
+  // const apiProxy = import.meta.env.VITE_API_PROXY;
+
+  useEffect(() => {
+    const fetchBackendData = async () => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_API_PROXY}/backend-route`);
+        setBackendData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchBackendData();
+  }, []);
+
   return (
-    <div>
-      <AppRoutes /*backendUrl={backendUrl}*/ />
-    </div>
+      <div>
+        <Announcement />
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </div>
   );
 }
 

@@ -2,85 +2,35 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Header from '../../components/Header/Header.jsx';
-import Announcement from '../../components/Announcement/Announcement.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
 import styles from './About.module.css';
 
 
 const About = () => {
-
-    {/*
-    const githubUrl = 'https://github.com/vivignutz/';
-
-    const renderAboutColumn = () => (
-        <div className={`col-lg-6 ${styles.aboutColumn}`}>
-            <h3 className={styles.aboutTitle}>About</h3>
-            <hr />
-            <p className={styles.textAbout}>
-                Made by Viviane Gnutzmann with LOVE{' '}
-                <FontAwesomeIcon icon={faHeart} color="red" />
-            </p>
-            <br />
-
-            <p className={styles.textAbout}>A project for ReDi School: <br />
-                Full Stack Web Development Bootcamp</p>
-            <br />
-
-            <p className={styles.textAbout}>This website was made for educational purposes only.</p>
-            <hr />
-
-            {/* Social links */}
-            {/*
-            <p className={`${styles.textLinks}`}>
-                Follow me:
-                <span className={styles.iconSpacer}></span>
-                <a href="http://www.facebook.com" title="Find us on Facebook" className={styles.iconLink}>
-                    <i className={`fab fa-facebook-square ${styles.socialIcon}`}></i>
-                </a>        
-                
-                <a href="http://www.twitter.com" title="Follow us on Twitter" className={styles.iconLink}>
-                    <i className={`fab fa-twitter-square ${styles.socialIcon}`}></i>
-                </a>
-                
-                <a href="http://www.instagram.com" title="Follow us on Instagram" className={styles.iconLink}>
-                    <i className={`fab fa-instagram-square ${styles.socialIcon}`}></i>
-                </a>    
-
-                <a href="http://www.youtube.com" title="Visit us on Facebook" className={styles.iconLink}>
-                    <i className={`fab fa-youtube-square ${styles.socialIcon}`}></i>
-                </a>  
-            </p>  
-
-            {/* GitHub button */}
-            {/*
-            <a href={githubUrl} className={`btn customBtn ${styles.customBtn}`} target="_blank" rel="noopener noreferrer">
-                <i className={`fab fa-github ${styles.githubIconMargin}`}></i>
-                Visit my GitHub
-            </a>
-        </div>
-    );
-    */}
-
     return (
-        <div>
-            <Announcement />
-            <Header />
-            <section className={`${styles.aboutColumn} mt-auto py-2`}>    
-                <div className={`col-lg-6 order-lg-1 text-start`}>
-                    <h3 className={styles.aboutTitle}>About Us</h3>
+        <div className={`container-fluid ${styles.aboutContainer}`}>
+            <section className={`${styles.aboutColumn} mt-auto py-2`}>
+                <div className={`order-lg-1 text-start`}>
+                    <h3 className={styles.aboutTitle}>Our Story</h3>
                     <br />
-
                     <p className={styles.textAbout}>
-                        Made by Viviane Gnutzmann with LOVE{' '}
+                        Welcome to our vintage haven! Here at Olshop, we believe in the power of <i>nostalgia</i> and the magic of memories. Each piece in our collection is handpicked with love and care, to bring warmth and charm to your modern life.
+                    </p>
+                    <br />
+                    <p className={styles.textAbout}>
+                        Crafted by Viviane Gnutzmann with LOVE{' '}
                         <FontAwesomeIcon icon={faHeart} color="red" />
                     </p>
                     <br />
-                    <p className={styles.textAbout}>This website was made for educational purposes only.</p>
+                    <p className={styles.textAbout}>
+                        This website was created with passion and dedication. Our journey to Olshop has been a rollercoaster of emotions, driven by a love for all things vintage and a commitment to quality. We hope you'll be as enchanted browsing our collection as we were assembling it.
+                    </p>
+                    <br />
+                    <p className={styles.textAbout}>
+                        This website was made for educational purposes only.
+                    </p>
                     <hr />
                 </div>
             </section>
-            <Footer />
         </div>
     );
 };
