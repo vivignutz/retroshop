@@ -1,7 +1,5 @@
 // Categories.jsx
-
 import styles from './Categories.module.css';
-
 
 const Categories = () => {
   const categoriesData = [
@@ -22,8 +20,8 @@ const Categories = () => {
               <img src={category.image} alt={category.name} className={styles['product-img']} />
             </a>
             <div className={`${styles['card-body']} pb-0`}>
-              <a href="#">
-                <h4 className={`${styles['mb-0']} ${styles['product-link']} pb-3 ${styles['secondary']}`}>
+              <a href="#" className={styles['product-link']}>
+                <h4 className={`${styles['categoryName']} ${styles['mb-0']} ${styles['secondary']}`}>
                   {category.name}
                 </h4>
               </a>

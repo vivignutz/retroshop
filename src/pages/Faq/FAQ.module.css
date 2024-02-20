@@ -1,0 +1,50 @@
+/* FAQ.module.css */
+
+/* Container */
+.faqContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Title and texts */
+.faqTitle {
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+    
+.textFaq {
+    text-align: left;
+    font-size: 17px;
+    padding: 0px 30px 0px 30px;
+}
+    
+.text-start {
+    text-align: center!important;
+    padding-bottom: 20px;
+    width: 100%;
+}
+    
+/* Break lines */
+.aboutHr {
+    width: auto;
+    margin-bottom: 3px;
+}
+
+
+/* Media queries */
+/* Large screens */
+@media (max-width: 1200px) {
+.faqColumn {
+    max-width: 100%;
+    margin: 0;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+.faqColumn {
+    max-width: 100%;
+    margin: 0;
+    }
+}

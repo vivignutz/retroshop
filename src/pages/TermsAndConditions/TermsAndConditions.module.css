@@ -1,0 +1,56 @@
+/* TermsAndConditions.module.css */
+
+/* Container */
+.termsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Title and texts */
+.termsTitle {
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.termsSubtitle {
+    padding-top: 10px;
+    font-weight: bold;
+    align-content: center;
+}
+    
+.textTerms {
+    text-align: left;
+    font-size: 17px;
+    padding: 0px 30px 0px 30px;
+}
+    
+.text-start {
+    text-align: center!important;
+    padding-bottom: 20px;
+    width: 100%;
+}
+    
+/* Break lines */
+.aboutHr {
+    width: auto;
+    margin-bottom: 3px;
+}
+
+
+/* Media queries */
+/* Large screens */
+@media (max-width: 1200px) {
+.termsColumn {
+    max-width: 100%;
+    margin: 0;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+.termsColumn {
+    max-width: 100%;
+    margin: 0;
+    }
+}

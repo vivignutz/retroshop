@@ -31,7 +31,7 @@ const Footer = () => {
                 <Link to="/privacy-policy" className={styles.footerLink}>Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/return" className={styles.footerLink}>Return and Refund Policy</Link>
+                <Link to="/return-policy" className={styles.footerLink}>Return and Refund Policy</Link>
               </li>
               <li>
                 <Link to="/shipping-policy" className={styles.footerLink}>Shipping Policy</Link>
@@ -47,11 +47,19 @@ const Footer = () => {
             <h3 className={styles.footerTitle}>Follow us</h3>
             <hr className={styles.footerHr} />
 
-            <div className={styles.socialIconsContainer}>
-              <FontAwesomeIcon icon={faFacebookSquare} className={styles.socialIcon} />
-              <FontAwesomeIcon icon={faTwitterSquare} className={styles.socialIcon} />
-              <FontAwesomeIcon icon={faInstagramSquare} className={styles.socialIcon} />
-              <FontAwesomeIcon icon={faYoutubeSquare} className={styles.socialIcon} />
+            <div className={styles.socialIconContainer}>
+              <Link to="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faFacebookSquare} className={styles.socialIcon} />
+              </Link>
+              <Link to="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faTwitterSquare} className={styles.socialIcon} />
+              </Link>
+              <Link to="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagramSquare} className={styles.socialIcon} />
+              </Link>
+              <Link to="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faYoutubeSquare} className={styles.socialIcon} />
+              </Link>
             </div>
             <br />
 

@@ -20,19 +20,13 @@
     overflow: hidden; 
 }
 
-h4 {
-    font-size: 40px;
+.categoryName {
+    font-size: 24px;
+    font-weight: bold;
     font-family: 'DM Sans', sans-serif;
     text-transform: uppercase;
-    color: #662C10;
+    color: #000;
     text-decoration: none;
-}
-
-.category-item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 .product-img {
