@@ -1,19 +1,18 @@
-/* Home page */
+// /* Home page */
 
-//import Announcement from '../../components/Announcement/Announcement'
-//import Header from '../../components/Header/Header';
-import Slider from '../../components/Slider/Slider';
-import Categories from '../../components/Categories/Categories';
-//import Footer from '../../components/Footer/Footer';
+// //import Announcement from '../../components/Announcement/Announcement'
+// //import Header from '../../components/Header/Header';
+// //import SliderSection from '../../components/Slider/SliderSection';
+// import Categories from '../../components/Categories/Categories';
+// //import Footer from '../../components/Footer/Footer';
 
 
-const Home = () => {
-    return (
-        <>
-        <Slider />
-        <Categories />
-        </>
-    )
-}
+// const Home = () => {
+//     return (
+//         <>
+//         <Categories />
+//         </>
+//     )
+// }
 
-export default Home;
+// export default Home;

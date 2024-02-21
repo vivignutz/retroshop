@@ -2,37 +2,40 @@
 
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Slider.module.css';
+import './SliderSection.module.css';
 
-const Slider = () => {
+const SliderSection = () => {
   return (
     <div>
-      <Carousel id="productCarousel" interval={3000} fade>
+      <Carousel  id="productSlider" interval={3000} fade>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/caroussel1.png"
+            src="/images/carousel1.png"
             alt="First slide"
           />
         </Carousel.Item>
+
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/caroussell2.png"
+            src="/images/carousel2.png"
             alt="Second slide"
           />
         </Carousel.Item>
+
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/caroussel4.png"
+            src="/images/carousel4.png"
             alt="Third slide"
           />
         </Carousel.Item>
+
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/caroussel6.png"
+            src="/images/carousel6.png"
             alt="Fourth slide"
           />
         </Carousel.Item>
@@ -41,4 +44,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default SliderSection;

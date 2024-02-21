@@ -1,0 +1,27 @@
+/* Newsletter.modules.css */
+
+.footerTitle {
+    font-size: 24px;
+    padding-top: 15px;
+}
+
+.newsletterTitle {
+    font-size: 24px;
+
+}
+
+.newsletterForm {
+    padding-bottom: 10px;
+}
+
+.text-start {
+    text-align: left!important;
+    padding-bottom: 20px;
+    width: fit-content
+}
+
+/* Break lines */
+.newsletterHr {
+    width: auto;
+    margin-bottom: 3px;
+}

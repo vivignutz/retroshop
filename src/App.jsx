@@ -6,6 +6,8 @@ import AppRoutes from "./routes";
 import Announcement from "./components/Announcement/Announcement";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import SliderSection from "./components/Slider/SliderSection";
+import Categories from "./components/Categories/Categories";
 
 const App = () => {
   const [backendData, setBackendData] = useState(null);
@@ -30,6 +32,8 @@ const App = () => {
       <div>
         <Announcement />
         <Header />
+        <SliderSection />
+        <Categories />
         <AppRoutes />
         <Footer />
       </div>

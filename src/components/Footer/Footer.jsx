@@ -3,8 +3,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCcVisa, faCcAmex, faBitcoin, faPaypal, faStripe } from '@fortawesome/free-brands-svg-icons';
 import { faFacebookSquare, faTwitterSquare, faInstagramSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
-import styles from './Footer.module.css';
 import { Link } from 'react-router-dom';
+import NewsletterComponent from '../Newsletter/Newsletter';
+import styles from './Footer.module.css';
+
 
 const Footer = () => {
   return (
@@ -62,6 +64,10 @@ const Footer = () => {
               </Link>
             </div>
             <br />
+
+            <div className={styles.newsletterContainer}>
+              <NewsletterComponent />
+            </div>
 
             {/* Payment methods */}
             <div className={`col-lg-12 order-lg-3 text-start`}>
