@@ -1,0 +1,118 @@
+/* Contact.module.css */
+
+/* Contact Info */
+
+/* Info Container */
+.contactInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+/* Titles and texts */ 
+.infoTitle,
+.formTitle {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0px 20px 0px;
+}
+
+.infoSubtitle {
+    padding-top: 10px;
+    font-weight: bold;
+    align-content: center;
+}
+
+.textInfo {
+    text-align: left;
+    font-size: 17px;
+    padding: 0px 30px 0px 30px;
+}
+    
+.text-start {
+    text-align: center!important;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* Break lines */
+.hr {
+    width: auto;
+    margin-bottom: 3px;
+}
+
+
+/* Contact Form */
+/* Form Container */
+.contactFormContainer {
+    /*display: flex;*/
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.contactForm {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.formGroup {
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.formLabel {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formControl {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0px;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.submitButton {
+    background-color: #586d06;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submitButton:hover {
+    background-color: #b8aa63;
+}
+
+/* Seletor específico para a coluna que contém o formulário */
+.col.d-lg-none,
+.col.d-none.d-lg-block {
+    flex: 1; /* Ou outro valor conforme necessário */
+    margin: 0 15px;
+}
+
+
+/* Media queries */
+/* Large screens */
+@media (max-width: 1200px) {
+    .infoColumn,
+    .contactColumn {
+        max-width: 100%;
+        margin: 0;
+        }
+    }
+    
+    /* Tablets */
+    @media (max-width: 768px) {
+    .infoColumn,
+    .contactColumn {
+        max-width: 100%;
+        margin: 0;
+        }
+    }

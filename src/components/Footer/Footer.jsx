@@ -14,7 +14,7 @@ const Footer = () => {
 
           {/* Legal pages and links */}
           <div className={`col-lg-6 order-lg-1 text-start`}>
-            <h3 className={styles.footerTitle}>Legal Pages</h3>
+            <h3 className={`${styles.footerTitle} text-start`}>Legal Pages</h3>
             <hr className={styles.footerHr} />
 
             <ul className={styles.linkList}>
@@ -44,7 +44,7 @@ const Footer = () => {
 
           {/* Social media links */}
           <div className={`col-lg-6 order-lg-2 text-start`}>
-            <h3 className={styles.footerTitle}>Follow us</h3>
+            <h3 className={`${styles.footerTitle} text-start`}>Follow us</h3>
             <hr className={styles.footerHr} />
 
             <div className={styles.socialIconContainer}>
@@ -65,7 +65,7 @@ const Footer = () => {
 
             {/* Payment methods */}
             <div className={`col-lg-12 order-lg-3 text-start`}>
-              <h3 className={styles.footerTitle}>Payment Methods</h3>
+              <h3 className={`${styles.footerTitle} text-start`}>Payment Methods</h3>
               <hr className={styles.footerHr} />
 
               <div className={styles.paymentIconsContainer}>

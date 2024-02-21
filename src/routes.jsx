@@ -10,6 +10,7 @@ import ShippingPolicy from "./pages/ShippingPolicy/ShippingPolicy";
 import FAQ from "./pages/Faq/Faq";
 import Cart from "./pages/Cart/Cart";
 import ProductList from "./components/ProductList/ProductList";
+import Contact from "./pages/Contact/Contact";
 //import ProductCard from "./pages/ProductCard/ProductCard";
 
 
@@ -25,6 +26,7 @@ function AppRoutes() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/products" element={<ProductList />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/contact" element={<Contact />} />
         </Routes>
     );
 }

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 // Faq.jsx
 
+import { Link } from 'react-router-dom';
 import styles from './FAQ.module.css';
 
 const FAQ = () => {
@@ -16,7 +17,7 @@ const FAQ = () => {
                     1. How can I contact Oldshop?
                   </strong>
                   <br />
-                  You can contact us by emailing support@oldshop.com or by filling out the contact form on our website. Our customer service team is available to assist you Monday through Friday from 9am to 5pm EST.
+                  You can contact us by emailing <Link to="mailto:support@oldshop.com" className={styles.emailLink}>support@oldshop.com</Link> or by filling out the contact form on our website. Our customer service team is available to assist you Monday through Friday from 9am to 5pm CET.
                 </p>
                 <br />
 
@@ -43,7 +44,7 @@ const FAQ = () => {
                     5. What payment methods do you accept?
                   </strong>
                   <br />
-                  We accept all major credit cards, PayPal, and Apple Pay for online orders. If you would like to pay by check or money order, please contact our customer service team for assistance.
+                  We accept all major credit cards through the Stripe gateway. We also accept PayPal and Bitcoins. If you have any questions, please contact our <Link to="/contact" style={{ color: 'blue', textDecoration: 'underline' }}>customer service team</Link> for assistance.
                 </p>
                 <br />
 
@@ -52,7 +53,7 @@ const FAQ = () => {
                     6. Do you offer international shipping?
                   </strong>
                   <br />
-                  Yes, we offer shipping to most destinations worldwide. Shipping costs and delivery times may vary depending on your location.
+                  Yes, we offer shipping to most destinations worldwide. Shipping costs and delivery times may vary depending on your location. For more information about our shipping, please have a look at our <Link to="/shipping-policy" style={{ color: 'blue', textDecoration: 'underline' }}>Shipping Policy here.</Link>
                 </p>
                 <br />
 
@@ -61,7 +62,7 @@ const FAQ = () => {
                     7. What is your return policy?
                   </strong>
                   <br />
-                  We offer a 14-day return policy for all purchases made on our website. Items must be unused and with original label and packaging to be eligible for a refund or exchange. Please have a look at our Return Policy here.
+                  We offer a 14-day return policy for all purchases made on our website. Items must be unused and with original label and packaging to be eligible for a refund or exchange. Please have a look at our <Link to="/return-policy" style={{ color: 'blue', textDecoration: 'underline' }}>Return Policy here.</Link>
                 </p>
                 <br />
                 

@@ -17,16 +17,16 @@ const About = () => {
                     </p>
                     <br />
                     <p className={styles.textAbout}>
-                        Crafted by Viviane Gnutzmann with LOVE{' '}
-                        <FontAwesomeIcon icon={faHeart} color="red" />
-                    </p>
-                    <br />
-                    <p className={styles.textAbout}>
                         This website was created with passion and dedication. Our journey to Olshop has been a rollercoaster of emotions, driven by a love for all things vintage and a commitment to quality. We hope you'll be as enchanted browsing our collection as we were assembling it.
                     </p>
                     <br />
                     <p className={styles.textAbout}>
                         This website was made for educational purposes only.
+                    </p>
+                    <br />
+                    <p className={styles.textAbout}>
+                        Crafted by Viviane Gnutzmann with LOVE{' '}
+                        <FontAwesomeIcon icon={faHeart} color="red" />
                     </p>
                     <hr />
                 </div>

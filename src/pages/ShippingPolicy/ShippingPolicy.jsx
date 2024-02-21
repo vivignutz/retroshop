@@ -16,7 +16,7 @@ const ShippingPolicy = () => {
                     <br />
 
                     <p className={styles.textShipping}>
-                        Shipping costs are calculated at checkout based on the weight and dimensions of your order, as well as your location. We offer several shipping options to choose from, including standard and expedited shipping
+                        Shipping costs are calculated at checkout based on the weight and dimensions of your order, as well as your location. We offer several shipping options to choose from, including standard and expedited shipping.
                     </p>
                     <br />
 

@@ -31,6 +31,10 @@
     margin-bottom: 3px;
 }
 
+.emailLink {
+    color: blue;
+    text-decoration: underline;
+}
 
 /* Media queries */
 /* Large screens */
