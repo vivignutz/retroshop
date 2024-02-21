@@ -11,7 +11,7 @@ const SliderSection = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/carousel1.png"
+            src="/images/carousel2.png"
             alt="First slide"
           />
         </Carousel.Item>
@@ -27,7 +27,7 @@ const SliderSection = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/carousel4.png"
+            src="/images/carousel2.png"
             alt="Third slide"
           />
         </Carousel.Item>
@@ -35,7 +35,7 @@ const SliderSection = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/carousel6.png"
+            src="/images/carousel2.png"
             alt="Fourth slide"
           />
         </Carousel.Item>
