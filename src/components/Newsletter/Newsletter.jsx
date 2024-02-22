@@ -10,7 +10,7 @@ const NewsletterComponent = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Submitted email:', email);
-        // Aqui você pode adicionar lógica para enviar o email para o backend ou para um serviço de newsletter
+        // Add a logica para enviar o email pro backend
     };
 
     return (

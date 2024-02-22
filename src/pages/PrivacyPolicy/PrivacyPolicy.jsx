@@ -1,7 +1,5 @@
 // PrivacyPolicy.jsx
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './PrivacyPolicy.module.css';
 
 const PrivacyPolicy = () => {

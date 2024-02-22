@@ -1,7 +1,7 @@
 // routes.jsx
 
 import { Routes, Route } from "react-router-dom";
-// import Home from "./pages/Home/Home";
+import Home from "./components/Home/Home";
 import Login from "./components/Auth/Login";
 import Signup from "./components/Auth/Signup";
 import About from "./pages/About/About";
@@ -11,7 +11,7 @@ import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import ShippingPolicy from "./pages/ShippingPolicy/ShippingPolicy";
 import FAQ from "./pages/Faq/Faq";
 import Cart from "./pages/Cart/Cart";
-import ProductList from "./pages/ProductList/ProductList";
+import ProductList from "./pages/ProductList/Products";
 import Contact from "./pages/Contact/Contact";
 //import ProductCard from "./pages/ProductCard/ProductCard";
 
@@ -19,7 +19,7 @@ import Contact from "./pages/Contact/Contact";
 function AppRoutes() {
     return (
         <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/about" element={<About />} />

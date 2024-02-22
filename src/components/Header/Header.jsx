@@ -9,7 +9,7 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <Navbar className={styles.Header} expand="lg">
+    <Navbar className={`${styles.Header} sticky-top`} expand="lg">
       <Navbar.Brand as={Link} to="/" className={`${styles.navbarBrand}`}>
         <div className="d-flex align-items-center brand-container">
           <img src="/logo.gif" className={styles.logoShop} alt="Animated Logo" />
@@ -21,13 +21,13 @@ const Header = () => {
 
       <Navbar.Toggle aria-controls="navbarNav" className={`navbar-toggler ${styles.customNavbarToggler}`} />
       <Navbar.Collapse id="navbarNav" className={`${styles.navbarToggler}`}>
-        <Nav className={`mr-auto ${styles.navbarNav}`}>
+        <Nav className={`${styles.navbarNav}`}>
           <Nav.Link as={Link} to="/" className={styles.customLink}>
             Home
           </Nav.Link>
 
           <Nav.Link as={Link} to="/about" className={styles.customLink}>
-            About Us
+            About
           </Nav.Link>
 
           <Nav.Link as={Link} to="/products" className={styles.customLink}>
@@ -37,21 +37,23 @@ const Header = () => {
           <Nav.Link as={Link} to="/contact" className={styles.customLink}>
             Contact
           </Nav.Link>
+        </Nav>
 
+        <Nav className={`${styles.navbarAuth}`}>
           {/** Login, signup and cart buttons */}
-          <Nav>
-            <Nav.Link as={Link} to="/login" className={styles.customLink}>
-              <FontAwesomeIcon icon={faUser} className={styles.icon} />
+          <Nav className={styles.authLinks}>
+            <Nav.Link as={Link} to="/login" className={styles.customAuthLink}>
+              <FontAwesomeIcon icon={faUser} className={styles.link} />
               Login
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/signup" className={styles.customLink}>
-              <FontAwesomeIcon icon={faSignInAlt} className={styles.icon} />
+            <Nav.Link as={Link} to="/signup" className={styles.customAuthLink}>
+              <FontAwesomeIcon icon={faSignInAlt} className={styles.link} />
               Signup
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/cart" className={styles.customLink}>
-              <FontAwesomeIcon icon={faShoppingCart} className={styles.icon} />
+            <Nav.Link as={Link} to="/cart" className={styles.customAuthLink}>
+              <FontAwesomeIcon icon={faShoppingCart} className={styles.link} />
               Cart
             </Nav.Link>
           </Nav>

@@ -10,7 +10,7 @@ const ContactInfo = () => {
     <div className={`container-fluid ${styles.contactInfoContainer}`}>
       <section className={`${styles.infoColumn} mt-auto py-2`}>
         <div className={`order-lg-1 text-start`}>
-        <h3 className={`${styles.formTitle} text-start`}><FontAwesomeIcon icon={faMapMarkerAlt } /><b> Contact Us!</b></h3>
+        <h3 className={`${styles.formTitle} text-start`}><FontAwesomeIcon icon={faMapMarkerAlt } /><b> Contact Us</b></h3>
           <h2 className={styles.infoSubtitle}>Oldshop - Your vintage stuffs!</h2>
           <br />
           <p className={styles.textInfo}>Postal Code 1234</p>
@@ -41,7 +41,7 @@ const ContactForm = () => {
     <div className={`container-fluid ${styles.contactFormContainer}`}>
       <section className={`${styles.contactColumn} mt-auto py-2`}>
         <div id="form">
-        <h3 className={`${styles.formTitle} text-start`}><FontAwesomeIcon icon={faPaperPlane} /><b> Send me a message!</b></h3>
+        <h3 className={`${styles.formTitle} text-start`}><FontAwesomeIcon icon={faPaperPlane} /><b> Send us a message</b></h3>
           <form>
             <div className={styles.formGroup}>
               <label className={styles.formLabel} htmlFor="name-field">Name</label>

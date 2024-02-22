@@ -23,28 +23,28 @@ const SliderSection = () => {
         <div>
           <img
             className={styles.sliderImage}
-            src="/images/carousel1.png"
+            src="/images/polaroid_banner.jpg"
             alt="First slide"
           />
         </div>
         <div>
           <img
             className={styles.sliderImage}
-            src="/images/carousel2.png"
+            src="/images/telefon_banner.jpg"
             alt="Second slide"
           />
         </div>
         <div>
           <img
             className={styles.sliderImage}
-            src="/images/carousel3.png"
+            src="/images/plate_banner.jpg"
             alt="Third slide"
           />
         </div>
         <div>
           <img
             className={styles.sliderImage}
-            src="/images/carousel4.png"
+            src="/images/car_banner.jpg"
             alt="Fourth slide"
           />
         </div>

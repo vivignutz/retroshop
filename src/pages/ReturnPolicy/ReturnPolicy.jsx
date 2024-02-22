@@ -1,7 +1,5 @@
 // ReturnPolicy.jsx
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ReturnPolicy.module.css';
 
 const ReturnPolicy = () => {

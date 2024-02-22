@@ -3,7 +3,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Form, Button, Card, Alert, Container } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import styles from "../Auth/authStyles.module.css";
 
@@ -14,7 +14,7 @@ function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const { setUserData } = useContext(UserContext);
-  const history = useHistory();
+  const history = useNavigate();
 
 
   const handleSubmit = async (e) => {

@@ -1,9 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // TermsConditions.jsx
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Footer from '../../components/Footer/Footer.jsx';
 import styles from './TermsAndConditions.module.css';
 
 const TermsAndConditions = () => {

@@ -3,7 +3,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Form, Button, Card, Alert, Container } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 
@@ -15,7 +15,7 @@ function Signup() {
   const [username, setUsername] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const history = useHistory();
+  const history = useNavigate();
   const { setUserData } = useContext(UserContext);
   
   const handleSubmit = async (e) => {

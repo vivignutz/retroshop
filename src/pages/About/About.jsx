@@ -1,7 +1,8 @@
 // about.jsx
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart  } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './About.module.css';
 
 
@@ -13,11 +14,13 @@ const About = () => {
                     <h3 className={styles.aboutTitle}>Our Story</h3>
                     <br />
                     <p className={styles.textAbout}>
-                        Welcome to our vintage haven! Here at Olshop, we believe in the power of <i>nostalgia</i> and the magic of memories. Each piece in our collection is handpicked with love and care, to bring warmth and charm to your modern life.
+                        Welcome to our vintage haven! <br />
+                        Here at Oldshop, we believe in the power of <i>nostalgia</i> and the magic of memories. Each piece in our collection is handpicked with love and care, to bring warmth and charm to your modern life.
                     </p>
                     <br />
                     <p className={styles.textAbout}>
-                        This website was created with passion and dedication. Our journey to Olshop has been a rollercoaster of emotions, driven by a love for all things vintage and a commitment to quality. We hope you'll be as enchanted browsing our collection as we were assembling it.
+                        This website was created with passion and dedication. Our journey to Oldshop has been a rollercoaster of emotions, driven by a love for all things vintage and a commitment to quality. <br />
+                        We hope you'll be as enchanted browsing our collection as we were assembling it.
                     </p>
                     <br />
                     <p className={styles.textAbout}>
@@ -25,8 +28,16 @@ const About = () => {
                     </p>
                     <br />
                     <p className={styles.textAbout}>
-                        Crafted by Viviane Gnutzmann with LOVE{' '}
+                        Crafted by Viviane Gnutzmann with LOVE {' '}
                         <FontAwesomeIcon icon={faHeart} color="red" />
+                    </p>
+                    <br />
+                    <p className={styles.textAbout}>
+                        Connect to my GitHub:{' '}
+                        <a href="https://github.com/seu-username" target="_blank" rel="noopener noreferrer" className={`customBtn ${styles.githubLink}`}>
+                            <FontAwesomeIcon icon={faGithub} className={`${styles.githubIcon}`} />
+                            GitHub
+                        </a>
                     </p>
                     <hr />
                 </div>

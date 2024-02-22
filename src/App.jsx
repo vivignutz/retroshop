@@ -7,11 +7,7 @@ import AppRoutes from "./routes";
 import Announcement from "./components/Announcement/Announcement";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import SliderSection from "./components/Slider/SliderSection";
-import Categories from "./components/Categories/Categories";
 import UserContext from "./context/UserContext";
-import Login from "./components/Auth/Login";
-import Signup from "./components/Auth/Signup";
 
 const App = () => {
   // State and useEffect to verify user login
@@ -50,8 +46,6 @@ const App = () => {
       <UserContext.Provider value={{ userData, setUserData }}>
         <Announcement />
         <Header />
-        <SliderSection />
-        <Categories />
         <AppRoutes />
         <Footer />
       </UserContext.Provider>

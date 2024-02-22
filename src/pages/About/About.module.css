@@ -31,54 +31,28 @@
     padding-bottom: 20px;
     width: 100%;
   }
-  
-  /* Social media Icons */
-  .textLinks {
-    display: flex;
-    align-items: center;
-    color: #2E2D29;
-  }
-  
-  .socialIcon {
-    color: #586d06;
-    margin-right: 10px; 
-  }
-  
-  .socialIcon:hover {
-    background-color: #b8aa63;
-  }
-  
-  .iconSpacer {
-    margin-right: 10px;
-  }
-  
+    
   /* GitHub button */
-  .customBtn,
-  a.customBtn,
-  .customBtn:link,
-  a.customBtn:link {
+  .githubLink {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
     background-color: #586d06;
     color: #fff;
     font-size: 16px;
-    margin-top: 3px;
+    padding: 8px 16px;
+    border-radius: 4px;
   }
   
-  .customBtn:hover,
-  a.customBtn:hover {
+  .githubLink:hover {
     background-color: #37410d;
     color: #fff;
+    margin-right: 8px; 
   }
   
   /* GitHub icon */
-  .customBtn i.fab.fa-github {
-    color: #fff; /* Cor do ícone */
-  }
-  
-  .customBtn .githubIconMargin {
-    margin-right: 6px;
+  .githubIcon {
+    margin-right: 10px;
   }
   
   /* Break lines */
@@ -86,7 +60,6 @@
     width: auto;
     margin-bottom: 3px;
   }
-
 
 /* Media queries */
 /* Large screens */
