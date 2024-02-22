@@ -1,24 +1,11 @@
-/* Slider.module.css */
+/* SliderSection.module.css */
 
-#productCarousel {
-    padding: 20px; /* Adiciona padding de 20px ao redor do carrossel */
+.sliderContainer {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#productCarousel img {
-    width: calc(100% - 40px); /* Calcula a largura das imagens descontando o padding */
-    margin: 0 auto; /* Centraliza as imagens horizontalmente */
-    transform: rotate(5deg); /* Adiciona um efeito de rotação */
-    transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave no efeito de rotação */
-}
-
-#productCarousel .carousel-item:first-child img {
-    transform: rotate(0deg); /* Remove a rotação para o primeiro slide */
-}
-
-#productCarousel .carousel-indicators {
-    bottom: 10px; /* Ajusta a distância do fundo da tela */
-}
-
-#productCarousel .carousel-indicators .active {
-    background-color: #fff; /* Cor de fundo da bolinha ativa */
+.sliderImage {
+  width: 100%;
+  height: auto;
 }

@@ -1,11 +1,20 @@
 // Footer.jsx
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCcVisa, faCcAmex, faBitcoin, faPaypal, faStripe } from '@fortawesome/free-brands-svg-icons';
-import { faFacebookSquare, faTwitterSquare, faInstagramSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import NewsletterComponent from '../Newsletter/Newsletter';
 import styles from './Footer.module.css';
+import { 
+  faFacebookSquare,
+  faTwitterSquare, 
+  faInstagramSquare, 
+  faYoutubeSquare,
+  faCcVisa, 
+  faCcAmex, 
+  faBitcoin, 
+  faPaypal, 
+  faStripe 
+} from '@fortawesome/free-brands-svg-icons';
 
 
 const Footer = () => {

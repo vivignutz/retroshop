@@ -1,51 +1,59 @@
 // Auth/Signup.jsx
 
-
 import React, { useState, useContext } from "react";
+import axios from "axios";
 import { Form, Button, Card, Alert, Container } from "react-bootstrap";
-//import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import UserContext from "../../context/UserContext";
-import axios from "axios";
 
 
 function Signup() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [confirmPassword, setConfirmPassword] = useState();
-  const [username, setUsername] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [username, setUsername] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  //const history = useHistory();
+  const history = useHistory();
+  const { setUserData } = useContext(UserContext);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
 
     try {
-        const newUser = { email, password, confirmPassword, username };
-        await axios.post("http://localhost:3001/signup", newUser);
-  
-        const loginRes = await axios.post("http://localhost:3001/login", {
-          email,
-          password,
-        });
-  
-        setUserData({
-          token: loginRes.data.token,
-          user: loginRes.data.user,
-        });
-  
-        localStorage.setItem("auth-token", loginRes.data.token);
+      // Check if passwords match
+      if (password !== confirmPassword) {
+        setError("Passwords do not match");
         setLoading(false);
-        history.push("/");
-      } catch (err) {
-        setLoading(false);
-        setError(err.response.data.msg);
+        return;
       }
-    };
 
-    const { setUserData } = useContext(UserContext);
+      const newUser = { email, password, username };
+      await axios.post("http://localhost:3001/signup", newUser);
+
+      const loginRes = await axios.post("http://localhost:3001/login", {
+        email,
+        password,
+      });
+  
+      setUserData({
+        token: loginRes.data.token,
+        user: loginRes.data.user,
+      });
+
+      localStorage.setItem("auth-token", loginRes.data.token);
+      setLoading(false);
+
+      // Redirect user to home page after successful signup
+      history.push("/");
+    } catch (err) {
+      setLoading(false);
+      setError(err.response?.data?.msg || "Something went wrong");
+    }
+  };
 
   return (
     <Container
@@ -62,8 +70,9 @@ function Signup() {
                 <Form.Group id="username">
                   <Form.Label>Username</Form.Label>
                   <Form.Control
-                    type="name"
+                    type="text"
                     required
+                    value={username}
                     onChange={(e) => setUsername(e.target.value)}
                   />
                 </Form.Group>
@@ -73,6 +82,7 @@ function Signup() {
                   <Form.Control
                     type="email"
                     required
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </Form.Group>
@@ -82,6 +92,7 @@ function Signup() {
                   <Form.Control
                     type="password"
                     required
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </Form.Group>
@@ -91,18 +102,19 @@ function Signup() {
                   <Form.Control
                     type="password"
                     required
+                    value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </Form.Group>
 
                 <Button disabled={loading} className="w-100 mt-2" type="submit">
-                  Sign Up
+                  {loading ? "Signing Up..." : "Sign Up"}
                 </Button>
               </Form>
             </Card.Body>
           </Card>
           <div className="w-100 text-center mt-2">
-            Already have an account?<Link to="/login">Log in</Link>
+            Already have an account? <Link to="/login">Log in</Link>
           </div>
         </>
       </div>

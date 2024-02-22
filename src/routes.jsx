@@ -2,6 +2,8 @@
 
 import { Routes, Route } from "react-router-dom";
 // import Home from "./pages/Home/Home";
+import Login from "./components/Auth/Login";
+import Signup from "./components/Auth/Signup";
 import About from "./pages/About/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import ReturnPolicy from "./pages/ReturnPolicy/ReturnPolicy";
@@ -18,6 +20,8 @@ function AppRoutes() {
     return (
         <Routes>
             {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/about" element={<About />} />
             <Route path="/return-policy" element={<ReturnPolicy />} /> 
             <Route path="/privacy-policy" element={<PrivacyPolicy />} /> 
