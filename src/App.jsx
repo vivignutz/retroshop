@@ -50,14 +50,12 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
       <UserContext.Provider value={{ userData, setUserData }}>
         <Announcement />
         <Header />
         <AppRoutes />
         <Footer />
       </UserContext.Provider>
-    </Router>
   );
 };
 

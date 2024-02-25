@@ -1,8 +1,9 @@
 /* SliderSection.module.css */
 
 .sliderContainer {
-  max-width: 1000px;
+  max-width: 1250px;
   margin: 0 auto;
+  background-color: rgb(250, 234, 213);
 }
 
 .sliderImage {
