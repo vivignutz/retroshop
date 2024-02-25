@@ -19,37 +19,45 @@ const App = () => {
   useEffect(() => {
     const checkLoggedIn = async () => {
       let token = localStorage.getItem("auth-token");
-      if (token === null) {
+      if (!token) {
         localStorage.setItem("auth-token", "");
         token = "";
       }
-      const tokenResponse = await axios.post(
-        "http://localhost:3001/tokenIsValid",
-        null,
-        { headers: { "x-auth-token": token } }
-      );
-      if (tokenResponse.data) {
-        const userRes = await axios.get("http://localhost:3001/", {
-          headers: { "x-auth-token": token },
-        });
-        setUserData({
-          token,
-          user: userRes.data,
-        });
+
+      try {
+        const tokenResponse = await axios.post(
+          "http://localhost:3000/tokenIsValid",
+          null,
+          { headers: { "x-auth-token": token } }
+        );
+
+        if (tokenResponse.data) {
+          const userRes = await axios.get("http://localhost:3000/user", {
+            headers: { "x-auth-token": token },
+          });
+          
+          setUserData({
+            token,
+            user: userRes.data,
+          });
+        }
+      } catch (err) {
+        console.error("Error checking logged in status:", err.message);
       }
     };
+
     checkLoggedIn();
   }, []);
 
   return (
-    <>
+    <Router>
       <UserContext.Provider value={{ userData, setUserData }}>
         <Announcement />
         <Header />
         <AppRoutes />
         <Footer />
       </UserContext.Provider>
-    </>
+    </Router>
   );
 };
 

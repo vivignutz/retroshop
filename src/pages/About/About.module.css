@@ -10,56 +10,55 @@
 .aboutColumn {
   flex: 1;
   text-align: left;
-
 }
   
-  /* About Titles and texts */
-  .aboutColumn h3 {
-    font-size: 24px;
-    font-weight: 600;
-    padding-top: 10px;
-  }
+/* About Titles and texts */
+.aboutColumn h3 {
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 10px;
+}
   
-  .textAbout {
-    text-align: left;
-    font-size: 17px;
-    padding: 0px 30px 0px 30px;
-  }
+.textAbout {
+  text-align: left;
+  font-size: 17px;
+  padding: 0px 30px 0px 30px;
+}
   
-  .text-start {
-    text-align: center!important;
-    padding-bottom: 20px;
-    width: 100%;
-  }
+.text-start {
+  text-align: center!important;
+  padding-bottom: 20px;
+  width: 100%;
+}
     
-  /* GitHub button */
-  .githubLink {
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #586d06;
-    color: #fff;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 4px;
-  }
+/* GitHub button */
+.githubLink {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #586d06;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
   
-  .githubLink:hover {
-    background-color: #37410d;
-    color: #fff;
-    margin-right: 8px; 
-  }
+.githubLink:hover {
+  background-color: #37410d;
+  color: #fff;
+  margin-right: 8px; 
+}
   
-  /* GitHub icon */
+/* GitHub icon */
   .githubIcon {
-    margin-right: 10px;
-  }
+  margin-right: 10px;
+}
   
-  /* Break lines */
-  .aboutHr {
-    width: auto;
-    margin-bottom: 3px;
-  }
+/* Break lines */
+.aboutHr {
+  width: auto;
+  margin-bottom: 3px;
+}
 
 /* Media queries */
 /* Large screens */

@@ -8,7 +8,7 @@ import UserContext from "../../context/UserContext";
 import styles from "../Auth/authStyles.module.css";
 
 
-function Login() {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -23,18 +23,18 @@ function Login() {
     setError("");
 
     try {
-        const loginRes = await axios.post("http://localhost:3001/login", {
+        const loginRes = await axios.post("http://localhost:3000/login", {
           email,
           password,
         });
 
         setUserData({
-        token: loginRes.data.token,
-        user: loginRes.data.user,
-      });
-
-      localStorage.setItem("auth-token", loginRes.data.token);
-      setLoading(false);
+          token: loginRes.data.token,
+          user: loginRes.data.user,
+        });
+  
+        localStorage.setItem("auth-token", loginRes.data.token);
+        setLoading(false);
 
       //Redirecting to home after login    
       history.push("/");
@@ -66,7 +66,7 @@ function Login() {
                 <Form.Control type="password" required onChange={e=> setPassword(e.target.value)}/>
               </Form.Group>
                 
-              <Button disabled={loading} className="w-100 mt-2" type="submit">
+              <Button disabled={loading} className="w-100 mt-2 custom-button" type="submit">
                 Log In
               </Button>
             </Form>
@@ -74,6 +74,7 @@ function Login() {
           </Card.Body>
         </Card>
         <div className="w-100 text-center mt-2">Need an account?<Link to="/signup">Sign up</Link></div>
+        <br />
       </div>
     </Container>
   );

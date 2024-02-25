@@ -1,0 +1,75 @@
+/* autStyles.module.css */
+
+/* Login and Sign UP */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+  
+.card {
+    max-width: 400px;
+}
+  
+.card-body {
+    padding: 2rem;
+}
+  
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+.form-label {
+    font-weight: bold;
+}
+  
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Buttons */
+.custom-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #586d06;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+  
+.custom-button:hover {
+    background-color: #37410d;
+    color: #fff;
+}
+
+/* Media queries  */
+@media screen and (max-width: 768px) {
+    .card {
+        max-width: 300px;
+    }
+}
+  
+@media screen and (max-width: 576px) {
+    .card {
+        max-width: 250px;
+    }
+}
+  
+@media screen and (max-width: 480px) {
+    .card {
+        max-width: 200px;
+    }
+}

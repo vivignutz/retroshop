@@ -1,22 +1,32 @@
 // Auth/Signup.jsx
 
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Form, Button, Card, Alert, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import UserContext from "../../context/UserContext";
 
 
-function Signup() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [username, setUsername] = useState("");
+const Signup = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+    username: "",
+    firstName: "",
+    lastName: "",
+    dateOfBirth: "",
+    country: "",
+    address: "",
+    number: "",
+    city: "",
+    postalCode: "",
+    avatar: "",
+  });
+
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useNavigate();
-  const { setUserData } = useContext(UserContext);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,26 +35,26 @@ function Signup() {
 
     try {
       // Check if passwords match
-      if (password !== confirmPassword) {
+      if (password !== confirmPassword !== formData.confirmPassword) {
         setError("Passwords do not match");
         setLoading(false);
         return;
       }
 
-      const newUser = { email, password, username };
-      await axios.post("http://localhost:3001/signup", newUser);
+      // Prepare form data for sending to the server
+      const formDataToSend = new FormData();
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
 
-      const loginRes = await axios.post("http://localhost:3001/login", {
-        email,
-        password,
-      });
-  
-      setUserData({
-        token: loginRes.data.token,
-        user: loginRes.data.user,
+      // Axios post request
+      await axios.post("http://localhost:3000/signup", formDataToSend, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
       });
 
-      localStorage.setItem("auth-token", loginRes.data.token);
+      // Handle successful signup here
       setLoading(false);
 
       // Redirect user to home page after successful signup
@@ -55,68 +65,100 @@ function Signup() {
     }
   };
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  
+  const handleFileChange = (event) => {
+    setFormData({
+      ...formData,
+      avatar: event.target.files[0],
+    });
+  };
+
+  
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
+    <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
       <div className="w-100" style={{ maxWidth: "400px" }}>
-        <>
-          <Card>
-            <Card.Body>
-              <h2 className="text-center mb-4">Sign Up</h2>
-              {error && <Alert variant="danger">{error}</Alert>}
-              <Form onSubmit={handleSubmit}>
-                <Form.Group id="username">
-                  <Form.Label>Username</Form.Label>
-                  <Form.Control
-                    type="text"
-                    required
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-                </Form.Group>
+        <Card>
+          <Card.Body>
+            <h2 className="text-center mb-4">Sign Up</h2>
+            {error && <Alert variant="danger">{error}</Alert>}
+            <Form onSubmit={handleSubmit}>
 
-                <Form.Group id="email">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </Form.Group>
+              <Form.Group id="firstName">
+                <Form.Label>First Name</Form.Label>
+                <Form.Control type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+              </Form.Group>
 
-                <Form.Group id="password">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    required
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </Form.Group>
+              <Form.Group id="lastName">
+                <Form.Label>Last Name</Form.Label>
+                <Form.Control type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
+              </Form.Group>
 
-                <Form.Group id="password-confirm">
-                  <Form.Label>Password Confirmation</Form.Label>
-                  <Form.Control
-                    type="password"
-                    required
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                  />
-                </Form.Group>
+              <Form.Group id="firstName">
+                <Form.Label>Username</Form.Label>
+                <Form.Control type="text" name="username" value={formData.username} onChange={handleChange} />
+              </Form.Group>
 
-                <Button disabled={loading} className="w-100 mt-2" type="submit">
-                  {loading ? "Signing Up..." : "Sign Up"}
-                </Button>
-              </Form>
-            </Card.Body>
-          </Card>
-          <div className="w-100 text-center mt-2">
-            Already have an account? <Link to="/login">Log in</Link>
-          </div>
-        </>
+              <Form.Group id="dateOfBirth">
+                <Form.Label>Date of Birth</Form.Label>
+                <Form.Control type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} />
+              </Form.Group>
+
+              <Form.Group id="street">
+                <Form.Label>Address</Form.Label>
+                <Form.Control type="text" name="address" value={formData.address} onChange={handleChange} />
+              </Form.Group>
+
+              <Form.Group id="streetNumber">
+                <Form.Label>Number</Form.Label>
+                <Form.Control type="text" name="number" value={formData.number} onChange={handleChange} />
+              </Form.Group>
+
+              <Form.Group id="city">
+                <Form.Label>City</Form.Label>
+                <Form.Control type="text" name="city" value={formData.city} onChange={handleChange} />
+              </Form.Group>
+
+              <Form.Group id="country">
+                <Form.Label>Country</Form.Label>
+                <Form.Control type="text" name="country" value={formData.country} onChange={handleChange} />
+              </Form.Group>
+
+              <Form.Group id="postalCode">
+                <Form.Label>Postal Code</Form.Label>
+                <Form.Control type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} />
+              </Form.Group>
+
+              <Form.Group id="avatar">
+                <Form.Label>Photo/Avatar</Form.Label>
+                <Form.Control type="file" name="avatar" onChange={handleFileChange} />
+              </Form.Group>
+
+              <Form.Group id="password">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="text" name="password" value={formData.password} onChange={handleChange} />
+              </Form.Group>
+
+              <Form.Group id="confirmPassword">
+                <Form.Label>Confirm Password</Form.Label>
+                <Form.Control type="text" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+              </Form.Group>
+
+              <Button disabled={loading} className="w-100 mt-2 custom-button" type="submit">
+                {loading ? "Signing Up..." : "Sign Up"}
+              </Button>
+            </Form>
+          </Card.Body>
+        </Card>
+        <div className="w-100 text-center mt-2">
+          Already have an account? <Link to="/login">Log in</Link>
+          <br />
+        </div>
       </div>
     </Container>
   );
