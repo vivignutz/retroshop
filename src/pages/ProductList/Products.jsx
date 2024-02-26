@@ -34,13 +34,14 @@ const Products = () => {
           <div className={`order-lg-1 text-start`}>
             <h3 className={styles.productsTitle}>All Products</h3>
             <br />
+            
               {/* <Categories /> */}
               <div className='product'>
                 <div className='container mt-5'>
                   <div className="container">
                       <div className='row'>
                         {products.map((product) => (
-                          <div  className='col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-3'>
+                          <div key={product._id} className='col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-3'>
                             <ProductCard product={product} />
                           </div>
                         ))}

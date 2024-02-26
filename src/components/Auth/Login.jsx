@@ -13,7 +13,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const { setUserData } = useContext(UserContext);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ const Login = () => {
       setLoading(false);
 
       //Redirecting to home after login
-      history.push("/");
+      navigate("/");
     } catch (err) {
       setLoading(false);
       setError(err.response?.data?.msg || "Something went wrong");

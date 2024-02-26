@@ -2,15 +2,20 @@
 
 /* ProductCard.css */
 
-.card-container {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+.container {
+  display: flex;
+}
+
+.cardContainer {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
-  .product-image {
+}
+  
+  .productImage {
     width: 100%;
     height: auto;
     border-radius: 8px;

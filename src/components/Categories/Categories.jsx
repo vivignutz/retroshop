@@ -6,12 +6,12 @@ import styles from './Categories.module.css';
 
 const Categories = () => {
   const categoriesData = [
-    { id: 1, name: 'Furniture', image: './images/furniture.jpg' },
-    { id: 2, name: 'Kitchen', image: './images/kitchen.jpg' },
-    { id: 3, name: 'Bathroom', image: './images/wc.jpg' },
-    { id: 4, name: 'Electronics', image: './images/electronics.jpg' },
-    { id: 5, name: 'Decor', image: './images/decor.jpg' },
-    { id: 6, name: 'Miscellaneous', image: './images/others.jpg' },
+    { id: 1, name: 'Furniture', image: './images/categories/furniture.jpg' },
+    { id: 2, name: 'Kitchen', image: './images/categories/kitchen.jpg' },
+    { id: 3, name: 'Bathroom', image: './images/categories/wc.jpg' },
+    { id: 4, name: 'Electronics', image: './images/categories/electronics.jpg' },
+    { id: 5, name: 'Decor', image: './images/categories/decor.jpg' },
+    { id: 6, name: 'Miscellaneous', image: './images/categories/others.jpg' },
   ];
   
   return (
