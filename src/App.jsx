@@ -7,6 +7,8 @@ import AppRoutes from "./routes";
 import Announcement from "./components/Announcement/Announcement";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import ProductsList from "./pages/ProductList/Products.jsx";
+import ProductCard from "./components/ProductCard/ProductCard.jsx"
 import UserContext from "./context/UserContext";
 
 const App = () => {
@@ -53,6 +55,10 @@ const App = () => {
       <UserContext.Provider value={{ userData, setUserData }}>
         <Announcement />
         <Header />
+        <Router>
+          <Route exact path="/products" component={ProductsList} />
+          <Route exact path="/products/:productName" component={ProductCard} />
+        </Router>
         <AppRoutes />
         <Footer />
       </UserContext.Provider>

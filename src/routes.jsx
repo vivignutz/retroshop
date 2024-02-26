@@ -1,19 +1,19 @@
 // routes.jsx
 
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home";
-import Login from "./components/Auth/Login";
-import Signup from "./components/Auth/Signup";
-import About from "./pages/About/About";
-import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
-import ReturnPolicy from "./pages/ReturnPolicy/ReturnPolicy";
-import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
-import ShippingPolicy from "./pages/ShippingPolicy/ShippingPolicy";
-import FAQ from "./pages/Faq/Faq";
-import Cart from "./pages/Cart/Cart";
-import ProductList from "./pages/ProductList/Products";
-import Contact from "./pages/Contact/Contact";
-//import ProductCard from "./pages/ProductCard/ProductCard";
+import Home from "./components/Home/Home.jsx";
+import Login from "./components/Auth/Login.jsx";
+import Signup from "./components/Auth/Signup.jsx";
+import About from "./pages/About/About.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
+import ReturnPolicy from "./pages/ReturnPolicy/ReturnPolicy.jsx";
+import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions.jsx";
+import ShippingPolicy from "./pages/ShippingPolicy/ShippingPolicy.jsx";
+import FAQ from "./pages/Faq/FAQ.jsx";
+import Cart from "./pages/Cart/Cart.jsx"
+import ProductList from "./pages/ProductList/Products.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
+import ProductCard from "../src/components/ProductCard/ProductCard.jsx";
 
 
 function AppRoutes() {
@@ -29,6 +29,7 @@ function AppRoutes() {
             <Route path="/shipping-policy" element={<ShippingPolicy />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/products" element={<ProductList />} />
+            <Route path="/products/:slug" element={<ProductCard />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
         </Routes>

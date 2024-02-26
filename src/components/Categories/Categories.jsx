@@ -1,4 +1,6 @@
 // Categories.jsx
+
+import { Link } from 'react-router-dom'; 
 import styles from './Categories.module.css';
 
 const Categories = () => {
@@ -16,16 +18,14 @@ const Categories = () => {
       <div className={styles['category-grid']}>
         {categoriesData.map((category) => (
           <div className={styles['card']} key={category.id}>
-            <a href="#">
+            <Link to={`/products?category=${category.name}`} className={styles['product-link']}>
               <img src={category.image} alt={category.name} className={styles['product-img']} />
-            </a>
-            <div className={`${styles['card-body']} pb-0`}>
-              <a href="#" className={styles['product-link']}>
+              <div className={`${styles['card-body']} pb-0`}>
                 <h4 className={`${styles['categoryName']} ${styles['mb-0']} ${styles['secondary']}`}>
                   {category.name}
                 </h4>
-              </a>
-            </div>
+              </div>
+            </Link>
           </div>
         ))}
       </div>

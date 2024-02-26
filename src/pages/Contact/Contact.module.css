@@ -12,6 +12,7 @@
 /* Titles and texts */ 
 .infoTitle,
 .formTitle {
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     font-weight: 600;
     padding: 20px 0px 20px 0px;
