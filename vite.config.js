@@ -12,23 +12,5 @@ export default ({
       },
     },
   },
-
-  build: {
-    assetsDir: ".",
-    outDir: "dist",
-    emptyOutDir: true,
-    rollupOptions: {
-      input: "src/index.jsx"
-    }
-  },
-  optimizeDeps: {
-    include: [
-      "react",
-      "react-dom",
-      "axios"
-    ]
-  },
-  hmr: {
-    overlay: false,
-  },
 });
+

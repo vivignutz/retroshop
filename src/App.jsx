@@ -1,7 +1,7 @@
 // App.jsx
 
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import AppRoutes from "./routes";
 import Announcement from "./components/Announcement/Announcement";
@@ -28,13 +28,13 @@ const App = () => {
 
       try {
         const tokenResponse = await axios.post(
-          "http://localhost:3000/tokenIsValid",
+          `${import.meta.env.VITE_BACKEND_URL}/auth/tokenIsValid`,
           null,
           { headers: { "x-auth-token": token } }
         );
-
+    
         if (tokenResponse.data) {
-          const userRes = await axios.get("http://localhost:3000/user", {
+          const userRes = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/user`, {
             headers: { "x-auth-token": token },
           });
           
@@ -52,16 +52,18 @@ const App = () => {
   }, []);
 
   return (
-      <UserContext.Provider value={{ userData, setUserData }}>
+    <UserContext.Provider value={{ userData, setUserData }}>
+      <Router>
+        <Routes>
+          <Route exact path="/products" element={<ProductsList />} />
+          <Route exact path="/products/:product_name" element={<ProductCard />} />
+        </Routes>
         <Announcement />
         <Header />
-        <Router>
-          <Route exact path="/products" component={ProductsList} />
-          <Route exact path="/products/:productName" component={ProductCard} />
-        </Router>
         <AppRoutes />
         <Footer />
-      </UserContext.Provider>
+      </Router>
+    </UserContext.Provider>
   );
 };
 

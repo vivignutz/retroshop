@@ -23,10 +23,10 @@ const Login = () => {
     setError("");
 
     try {
-        const loginRes = await axios.post("http://localhost:3000/login", {
-          email,
-          password,
-        });
+      const loginRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, {
+        email,
+        password,
+      });
 
         setUserData({
           token: loginRes.data.token,

@@ -48,7 +48,7 @@ const Signup = () => {
       }
 
       // Axios post request
-      await axios.post("http://localhost:3000/signup", formDataToSend, {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/signup`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
