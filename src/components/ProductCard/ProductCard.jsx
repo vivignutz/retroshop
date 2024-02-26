@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Spinner } from 'react-bootstrap';
 import axios from "axios";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -26,7 +27,9 @@ const ProductCard = () => {
     }, [id]);
 
     if (!product) {
-        return <p>Loading...</p>;
+        return <Spinner animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+        </Spinner>;
     }
 
     return (

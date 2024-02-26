@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../../components/ProductCard/ProductCard.jsx";
-import Categories from "../../components/Categories/Categories.jsx"
+// import Categories from "../../components/Categories/Categories.jsx"
 import styles from "./Products.module.css"
 
 
@@ -34,7 +34,7 @@ const Products = () => {
           <div className={`order-lg-1 text-start`}>
             <h3 className={styles.productsTitle}>All Products</h3>
             <br />
-              <Categories />
+              {/* <Categories /> */}
               <div className='product'>
                 <div className='container mt-5'>
                   <div className="container">
