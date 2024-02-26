@@ -1,7 +1,7 @@
 // vite.config.js
 import react from "@vitejs/plugin-react";
 
-export default ({
+export default {
   plugins: [react()],
   server: {
     proxy: {
@@ -13,22 +13,10 @@ export default ({
     },
   },
 
-  build: {
-    assetsDir: ".",
-    outDir: "dist",
-    emptyOutDir: true,
-    rollupOptions: {
-      input: "src/index.jsx"
-    }
-  },
   optimizeDeps: {
-    include: [
-      "react",
-      "react-dom",
-      "axios"
-    ]
+    include: ["react", "react-dom", "axios"],
   },
   hmr: {
     overlay: false,
   },
-});
+};

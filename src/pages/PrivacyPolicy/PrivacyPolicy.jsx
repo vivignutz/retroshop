@@ -1,5 +1,6 @@
 // PrivacyPolicy.jsx
 
+import React from 'react'
 import styles from './PrivacyPolicy.module.css';
 
 const PrivacyPolicy = () => {
