@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // TermsConditions.jsx
-
+import React from 'react';
 import styles from './TermsAndConditions.module.css';
 
 const TermsAndConditions = () => {
