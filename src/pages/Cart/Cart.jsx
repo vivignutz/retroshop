@@ -1,9 +1,7 @@
 // Cart.jsx
-
-// Cart.jsx
-
-import React from "react";
-import styles from "./Cart.module.css";
+import React from 'react';
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 const Cart = ({ cartItems }) => {
 
@@ -37,5 +35,4 @@ const Cart = ({ cartItems }) => {
     </div>
   );
 }
-
 export default Cart;

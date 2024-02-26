@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // Faq.jsx
-
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './FAQ.module.css';
 

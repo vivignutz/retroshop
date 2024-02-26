@@ -1,6 +1,6 @@
 // src/components/ProductList.jsx
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../../components/ProductCard/ProductCard.jsx";
 import Categories from "../../components/Categories/Categories.jsx"
@@ -16,7 +16,7 @@ const Products = () => {
 
   const fetchData = async () => {
     try {
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/products/${id}`);
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/product`); 
 
         localStorage.setItem('favoriteProducts', JSON.stringify(response.data));
         const lsProducts = JSON.parse(localStorage.getItem('favoriteProducts'));

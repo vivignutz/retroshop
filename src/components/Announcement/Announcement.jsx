@@ -1,5 +1,6 @@
 // Announcement.jsx
 
+import React from 'react';
 import styles from './Announcement.module.css';
 
 const Announcement = () => {

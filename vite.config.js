@@ -1,7 +1,7 @@
 // vite.config.js
 import react from "@vitejs/plugin-react";
 
-export default ({
+export default {
   plugins: [react()],
   server: {
     proxy: {
@@ -12,5 +12,11 @@ export default ({
       },
     },
   },
-});
 
+  optimizeDeps: {
+    include: ["react", "react-dom", "axios"],
+  },
+  hmr: {
+    overlay: false,
+  },
+};

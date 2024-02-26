@@ -7,7 +7,6 @@ import { Link, useNavigate } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import styles from "../Auth/authStyles.module.css";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +14,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const { setUserData } = useContext(UserContext);
   const history = useNavigate();
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,21 +26,21 @@ const Login = () => {
         password,
       });
 
-        setUserData({
-          token: loginRes.data.token,
-          user: loginRes.data.user,
-        });
-  
-        localStorage.setItem("auth-token", loginRes.data.token);
-        setLoading(false);
+      setUserData({
+        token: loginRes.data.token,
+        user: loginRes.data.user,
+      });
 
-      //Redirecting to home after login    
+      localStorage.setItem("auth-token", loginRes.data.token);
+      setLoading(false);
+
+      //Redirecting to home after login
       history.push("/");
     } catch (err) {
-        setLoading(false);
-        setError(err.response?.data?.msg || "Something went wrong");
-      }
-    };
+      setLoading(false);
+      setError(err.response?.data?.msg || "Something went wrong");
+    }
+  };
 
   return (
     <Container
@@ -58,26 +56,39 @@ const Login = () => {
             <Form onSubmit={handleSubmit}>
               <Form.Group id="email">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" required onChange={e => setEmail(e.target.value)}/>
+                <Form.Control
+                  type="email"
+                  required
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </Form.Group>
 
               <Form.Group id="password">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" required onChange={e=> setPassword(e.target.value)}/>
+                <Form.Control
+                  type="password"
+                  required
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </Form.Group>
-                
-              <Button disabled={loading} className="w-100 mt-2 custom-button" type="submit">
+
+              <Button
+                disabled={loading}
+                className="w-100 mt-2 custom-button"
+                type="submit"
+              >
                 Log In
               </Button>
             </Form>
-
           </Card.Body>
         </Card>
-        <div className="w-100 text-center mt-2">Need an account?<Link to="/signup">Sign up</Link></div>
+        <div className="w-100 text-center mt-2">
+          Need an account?<Link to="/signup">Sign up</Link>
+        </div>
         <br />
       </div>
     </Container>
   );
-}
+};
 
 export default Login;
