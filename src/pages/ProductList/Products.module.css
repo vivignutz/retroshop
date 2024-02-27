@@ -2,8 +2,15 @@
 
 /* Container */
 .productsContainer {
-    /* display: flex; */
     flex-wrap: wrap;
+}
+
+.card {
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .product {
@@ -44,16 +51,16 @@ h3 {
     margin-bottom: 3px;
 }
 
-/* Para telas menores que 768px (por exemplo, dispositivos móveis) */
+/* For screens smaller than 768px */
 @media screen and (max-width: 767px) {
     .row-cols-1 {
       grid-template-columns: repeat(1, 1fr); /* Um produto por linha */
     }
 }
 
-/* Para telas maiores ou igual a 768px (por exemplo, tablets e desktops) */
+/* For screens greater than or equal to 768px */
 @media screen and (min-width: 768px) {
     .row-cols-lg-2 {
-      grid-template-columns: repeat(2, 1fr); /* Dois produtos por linha */
+      grid-template-columns: repeat(2, 1fr);
     }
 }
