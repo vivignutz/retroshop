@@ -38,7 +38,7 @@ const Products = () => {
   const handleCategoryFilter = async (category) => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/product${
+        `${import.meta.env.VITE_BACKEND_URL}/products${
           category ? `?category=${category}` : ""
         }`
       );
