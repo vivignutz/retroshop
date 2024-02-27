@@ -2,6 +2,18 @@
 
 /* ProductCard.css */
 
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  overflow: hidden; 
+  transition: transform 0.3s ease;
+}
+
+.cardLink:hover {
+  transform: translateY(-5px);
+}
+
 .container {
   /* display: flex; */
   margin: 20px auto;
@@ -45,5 +57,5 @@
   }
 
   .addToCartButton:hover {
-    background-color: #45a049;
+        transform: translateY(-5px);
   }
