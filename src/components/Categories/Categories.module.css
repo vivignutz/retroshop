@@ -4,6 +4,17 @@
     margin: 20px auto;
 }
 
+.category-container-title {
+    text-align: center;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.category-container-title h4 {
+    font-size: 30px;
+    padding: 10px 0px 10px 0px;
+}
+
 .category-grid {
     display: grid;
     gap: 15px;
@@ -26,7 +37,7 @@
 }
 
 .categoryName {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     font-family: 'DM Sans', sans-serif;
     text-transform: uppercase;

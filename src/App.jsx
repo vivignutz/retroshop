@@ -6,7 +6,6 @@ import axios from "axios";
 import Announcement from "./components/Announcement/Announcement";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import ProductsList from "./pages/ProductList/Products.jsx";
 import ProductCard from "./components/ProductCard/ProductCard.jsx";
 import UserContext from "./context/UserContext";
 import Home from "./components/Home/Home.jsx";
@@ -19,7 +18,7 @@ import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions.js
 import ShippingPolicy from "./pages/ShippingPolicy/ShippingPolicy.jsx";
 import FAQ from "./pages/Faq/FAQ.jsx";
 import Cart from "./pages/Cart/Cart.jsx";
-import ProductList from "./pages/ProductList/Products.jsx";
+import Products from "./pages/ProductList/Products.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 
 const App = () => {
@@ -83,12 +82,10 @@ const App = () => {
           />
           <Route path="/shipping-policy" element={<ShippingPolicy />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/products/:slug" element={<ProductCard />} />
+          <Route path="/products" element={<Products />} />
+          {/* <Route path="/products/:slug" element={<ProductCard />} /> */}
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
-          <Route exact path="/products" component={<ProductsList />} />
-          <Route exact path="/products/:productName" component={<ProductCard />} />
         </Routes>
         <Footer />
       </UserContext.Provider>
