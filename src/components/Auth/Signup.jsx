@@ -33,12 +33,12 @@ const Signup = () => {
     setError("");
 
     try {
-      // Check if passwords match
-      // Prepare form data for sending to the server
+      // Check if passwords match and prepare form data for sending to the server
       const formDataToSend = new FormData();
       for (const key in formData) {
       formDataToSend.append(key, formData[key]);
-    } debugger;
+    } debugger
+
       if ((formDataToSend.get("password") !== formDataToSend.get("confirmPassword"))) {
         setError("Passwords do not match");
         setLoading(false);
@@ -46,7 +46,6 @@ const Signup = () => {
       }
 
       // Axios post request
-      debugger;
       await axios.post(`${import.meta.env.VITE_BACKEND_URL}/signup`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
